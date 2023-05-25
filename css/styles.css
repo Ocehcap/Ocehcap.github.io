@@ -11030,6 +11030,21 @@ html {
   border-color: black !important;
 }
 
+.carousel-image {
+  width: 500px; 
+  height: 700px;
+}
+
+
+.before-colon {
+  color: black; 
+}
+
+.after-colon {
+  color: blue;
+  text-decoration: underline;  
+}
+
 
 
 
