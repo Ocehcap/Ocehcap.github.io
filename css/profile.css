@@ -1,0 +1,66 @@
+.full.dis_flex.center_text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.profile_img img {
+  max-width: 180px;
+  height: auto;
+}
+
+.midde_cont {
+  margin-top: 50px; /* Adiciona um espaçamento de 50 pixels */
+}
+
+.profile_img {
+  margin-right: 15px;
+}
+
+.profile_contant {
+  margin-left: 15px;
+}
+
+.tab_style2{
+  margin-top: 25px;
+}
+
+.col-md-8{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0, 0.1);
+}
+
+.d-flex_flex-column{
+  background-color: #F8F8F8;
+}
+
+.number_of_trades{
+    width: 100%; 
+    color: #455A64;
+    font-style: Poppins;         
+}
+
+.contact .e-mail .list-unstyled .contact_inner{
+  color:#455A64;
+  font-style: Poppins;    
+}
+
+.tabbar nav div.nav-tabs .nav-link {
+  border-radius: 0;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.tab_style2 .tabbar nav div.nav-tabs .nav-link.active {
+  background: #000000;
+  color: #fff;
+  border-color: #000000;
+}
+
+.snkr-trade__avatar {
+  margin-right: 10px;
+  width: 50px;
+  height: auto;
+}
