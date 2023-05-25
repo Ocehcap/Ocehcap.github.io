@@ -10930,7 +10930,7 @@ html {
 }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.5); /* Define a cor de sobreposição com transparência */
+  background-color: rgba(0, 0, 0, 0.7); /* Define a cor de sobreposição com transparência */
   background-blend-mode: multiply; /* Multiplica a cor de sobreposição com a imagem */
 }
 
