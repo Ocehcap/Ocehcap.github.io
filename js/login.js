@@ -66,6 +66,7 @@ new Vue({
 
         console.log('Usuário já existente. Carregando informações do localStorage.');
 
+        window.location.href = 'faq.html';
       }
     },
   },
