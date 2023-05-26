@@ -1,5 +1,5 @@
 new Vue({
-  el: '#listaUser',
+  el: '#app',
   mounted() {
     this.$nextTick(() => {
       google.accounts.id.initialize({
