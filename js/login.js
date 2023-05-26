@@ -65,6 +65,8 @@ new Vue({
         localStorage.setItem('currentUser', JSON.stringify(userList[existingUserIndex]));
 
         console.log('Usuário já existente. Carregando informações do localStorage.');
+
+        window.location.href = 'faq.html';
       }
     },
   },
