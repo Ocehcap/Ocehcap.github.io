@@ -75,7 +75,7 @@
                             <div class="row justify-content-center">
                               <div class="col-md-6 col-sm-4">
                                 <label for="sneaker1" class="CORlableTRADE">Sneaker:</label>
-                                <select id="sneaker1" class="form-select selectTRADE" v-model="selectedSneaker1">
+                                <select id="sneaker1" class="form-select selectTRADE">
                                   <option selected>Select an option</option>
                                   <option v-for="sneaker in sneakers" :value="sneaker.name" :key="sneaker.name">{{ sneaker.name }}</option>
                                 </select>
@@ -89,7 +89,7 @@
                             <div class="row justify-content-center">
                               <div class="col-md-6 col-sm-4">
                                 <label for="sneaker2" class="CORlableTRADE">Sneaker:</label>
-                                <select id="sneaker2" class="form-select selectTRADE" v-model="selectedSneaker2">
+                                <select id="sneaker2" class="form-select selectTRADE">
                                   <option selected>Select an option</option>
                                   <option v-for="sneaker in sneakers" :value="sneaker.name" :key="sneaker.name">{{ sneaker.name }}</option>
                                 </select>
