@@ -1,5 +1,3 @@
-import jwt_decode from 'jwt-decode';
-
 new Vue({
   el: '#listaUser',
   mounted() {
