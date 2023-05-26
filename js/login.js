@@ -6,8 +6,8 @@ function handleCredentialResponse(response) {
   const users = localStorage.getItem('users');
   let userList = users ? JSON.parse(users) : [];
 
-  const existingUser = userList.find(user => user.id === data.sub);
-  if (!existingUser) {
+  const existingUserIndex = userList.findIndex(user => user.id === data.sub);
+  if (existingUserIndex === -1) {
     // Criar objeto do usuário com todas as informações necessárias
     const newUser = {
       id: data.sub,
