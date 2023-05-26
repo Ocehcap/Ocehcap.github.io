@@ -31,7 +31,7 @@ const app = new Vue({
       const initialSneakers = [
         {
           name: 'Nike Dunk Low Medium Curry',
-          photo: 'path/to/photo1.jpg'
+          photo: './images/nike-dunk-low-medium-curry-dropout-1_700x700.png'
         },
         {
           name: 'Nike Dunk Low University Blue',
