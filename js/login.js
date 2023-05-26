@@ -1,26 +1,36 @@
 new Vue({
   el: '#app',
+  data: {
+    currentUser: null, // Variável para armazenar o usuário atualmente logado
+  },
   mounted() {
     this.$nextTick(() => {
-      google.accounts.id.initialize({
-        client_id: "886063558665-5gnbgl39631a73910h7ptn8mn3mt17gn.apps.googleusercontent.com",
-        callback: this.handleCredentialResponse,
-      });
+      // Verifica se há um usuário logado no LocalStorage
+      const storedUser = localStorage.getItem('currentUser');
+      if (storedUser) {
+        this.currentUser = JSON.parse(storedUser);
+        console.log('Usuário logado:', this.currentUser);
+      } else {
+        google.accounts.id.initialize({
+          client_id: "886063558665-5gnbgl39631a73910h7ptn8mn3mt17gn.apps.googleusercontent.com",
+          callback: this.handleCredentialResponse,
+        });
 
-      google.accounts.id.renderButton(
-        document.getElementById("buttonDiv"),
-        {
-          theme: "filled_black",
-          size: "large",
-          type: "standard",
-          shape: "pill",
-          text: "signin",
-          locale: "en-US",
-          logo_alignment: "left",
-        }
-      );
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          {
+            theme: "filled_black",
+            size: "large",
+            type: "standard",
+            shape: "pill",
+            text: "signin",
+            locale: "en-US",
+            logo_alignment: "left",
+          }
+        );
 
-      google.accounts.id.prompt();
+        google.accounts.id.prompt();
+      }
     });
   },
   methods: {
@@ -46,14 +56,20 @@ new Vue({
         userList.push(newUser);
 
         localStorage.setItem('users', JSON.stringify(userList));
+        this.currentUser = newUser;
+        localStorage.setItem('currentUser', JSON.stringify(newUser));
 
         console.log('Usuário adicionado à lista e armazenado no localStorage.');
       } else {
-        console.log('Usuário já existente. Não foi adicionado novamente.');
+        this.currentUser = userList[existingUserIndex];
+        localStorage.setItem('currentUser', JSON.stringify(userList[existingUserIndex]));
+
+        console.log('Usuário já existente. Carregando informações do localStorage.');
       }
     },
   },
 });
+
 
 
 
