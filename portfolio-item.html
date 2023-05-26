@@ -69,42 +69,38 @@
                             <span class="name">Your Trade</span>
                         </div>
                     </div>
-                    <div class="bottom">
-                        <div class="left">
+                    <div id="listaSneakers">
+                        <div class="bottom">
+                          <div class="left">
                             <div class="row justify-content-center">
-                                <div class="col-md-6 col-sm-4">
-                                    <label for="sneaker1" class="CORlableTRADE">Sneaker:</label>
-                                    <select id="sneaker1" class="form-select selectTRADE">
-                                        <option selected>Select an option</option>
-                                        <option value="DLMC">Nike Dunk Low Medium Curry</option>
-                                        <option value="DLUB">Nike Dunk Low University Blue</option>
-                                        <option value="DLSG">Nike Dunk Low Spartan Green</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 col-sm-4">
-                                    <button id="adicionarPOP1" class="btn btn-custom" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"></button>
-                                </div>
+                              <div class="col-md-6 col-sm-4">
+                                <label for="sneaker1" class="CORlableTRADE">Sneaker:</label>
+                                <select id="sneaker1" class="form-select selectTRADE" v-model="selectedSneaker1">
+                                  <option selected>Select an option</option>
+                                  <option v-for="sneaker in sneakers" :value="sneaker.name" :key="sneaker.name">{{ sneaker.name }}</option>
+                                </select>
+                              </div>
+                              <div class="col-md-2 col-sm-4">
+                                <button id="adicionarPOP1" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                              </div>
                             </div>
-                        </div>
-                        <div class="right">
+                          </div>
+                          <div class="right">
                             <div class="row justify-content-center">
-                                <div class="col-md-6 col-sm-4">
-                                    <label for="sneaker2" class="CORlableTRADE">Sneaker:</label>
-                                    <select id="sneaker2" class="form-select selectTRADE">
-                                        <option selected>Select an option</option>
-                                        <option value="DLMC">Nike Dunk Low Medium Curry</option>
-                                        <option value="DLUB">Nike Dunk Low University Blue</option>
-                                        <option value="DLSG">Nike Dunk Low Spartan Green</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 col-sm-4">
-                                    <button id="adicionarPOP2" class="btn btn-custom" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"></button>
-                                </div>
+                              <div class="col-md-6 col-sm-4">
+                                <label for="sneaker2" class="CORlableTRADE">Sneaker:</label>
+                                <select id="sneaker2" class="form-select selectTRADE" v-model="selectedSneaker2">
+                                  <option selected>Select an option</option>
+                                  <option v-for="sneaker in sneakers" :value="sneaker.name" :key="sneaker.name">{{ sneaker.name }}</option>
+                                </select>
+                              </div>
+                              <div class="col-md-2 col-sm-4">
+                                <button id="adicionarPOP2" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                              </div>
                             </div>
+                          </div>
                         </div>
-                    </div>
+                      </div>
                 </div>
             </div>
         </section>
@@ -204,6 +200,7 @@
 
         <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
         <script src="js/caracteristicas.js"></script>
+        <script src="js/listaSneakers.js"></script>
 
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">

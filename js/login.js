@@ -1,5 +1,5 @@
 new Vue({
-  el: '#app',
+  el: '#login',
   data: {
     currentUser: null, // Variável para armazenar o usuário atualmente logado
   },

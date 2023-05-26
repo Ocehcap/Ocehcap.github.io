@@ -120,7 +120,10 @@
             <h1 class="fw-bolder">Wanna make a trade?</h1>
             <p class="lead fw-normal text-muted mb-0">CHECK IT OUT WHAT'S NEW</p>
           </div>
-          <h2 class="fw-bolder mb-3">Available Trades:</h2>
+          <h2 class="fw-bolder mb-3">Available Trades:
+            <button class="btn btn-features float-end" onclick="window.location.href = 'portfolio-item.html';">Create Trade</button>
+          </h2>
+          <br>
           <div class="boxtroca" v-for="troca in trocasFiltradas" :key="troca.id">
             <div class="top" :style="`background-image: url(${troca.imagem})`">
               <div class="profile">
