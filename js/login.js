@@ -1,4 +1,7 @@
+import jwt_decode from 'jwt-decode';
+
 new Vue({
+  el: '#listaUser',
   mounted() {
     this.$nextTick(() => {
       google.accounts.id.initialize({
@@ -52,7 +55,8 @@ new Vue({
       }
     },
   },
-}).$mount('#listaUser');
+});
+
 
 
 
