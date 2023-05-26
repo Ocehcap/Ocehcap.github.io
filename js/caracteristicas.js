@@ -25,7 +25,7 @@ new Vue({
     });
 
     // Update the event listener for the modal close button
-    const closeButton = document.querySelector('#exampleModal .btn-close');
+    const closeButton = document.querySelector('#exampleModal .btn-secondary');
     closeButton.addEventListener('click', function() {
       self.selectedSneaker = '';
     });
@@ -38,6 +38,7 @@ new Vue({
     });
   }
 });
+
 
   
   
