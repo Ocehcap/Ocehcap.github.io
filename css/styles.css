@@ -11045,6 +11045,10 @@ html {
   text-decoration: underline;  
 }
 
+.custom-input {
+  width: 150px; /* Ajuste o valor conforme necessário */
+  text-align: left;
+}
 
 
 

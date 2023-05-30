@@ -1,39 +1,78 @@
-function handleCredentialResponse(response) {
-  const data = jwt_decode(response.credential);
-  console.log(data);
+new Vue({
+  el: '#login',
+  data: {
+    currentUser: null, // Variável para armazenar o usuário atualmente logado
+  },
+  mounted() {
+    this.$nextTick(() => {
+      // Verifica se há um usuário logado no LocalStorage
+      const storedUser = localStorage.getItem('currentUser');
+      if (storedUser) {
+        this.currentUser = JSON.parse(storedUser);
+        console.log('Usuário logado:', this.currentUser);
+      } else {
+        google.accounts.id.initialize({
+          client_id: "886063558665-5gnbgl39631a73910h7ptn8mn3mt17gn.apps.googleusercontent.com",
+          callback: this.handleCredentialResponse,
+        });
 
-  // Enviar os dados do usuário para guardar.js
-  ListaUserApp.salvarUsuario({
-    fullName: data.name,
-    sub: data.sub,
-    given_name: data.given_name,
-    family_name: data.family_name,
-    email: data.email,
-    verifiedEmail: data.email_verified,
-    picture: data.picture
-  });
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          {
+            theme: "filled_black",
+            size: "large",
+            type: "standard",
+            shape: "pill",
+            text: "signin",
+            locale: "en-US",
+            logo_alignment: "left",
+          }
+        );
 
-  // Restante do código...
-}
+        google.accounts.id.prompt();
+      }
+    });
+  },
+  methods: {
+    handleCredentialResponse(response) {
+      const data = jwt_decode(response.credential);
+      console.log(data);
 
-window.onload = function () {
-  google.accounts.id.initialize({
-    client_id: "886063558665-5gnbgl39631a73910h7ptn8mn3mt17gn.apps.googleusercontent.com",
-    callback: handleCredentialResponse
-  });
+      const users = localStorage.getItem('users');
+      let userList = users ? JSON.parse(users) : [];
 
-  google.accounts.id.renderButton(
-    document.getElementById("buttonDiv"),{ 
-      theme: "filled_black", 
-      size: "large",
-      type: "standard",
-      shape: "pill",
-      text: "signin",
-      locale: "en-US",
-      logo_alignment: "left"
-    }  // customization attributes
-  );
+      const existingUserIndex = userList.findIndex((user) => user.id === data.sub);
+      if (existingUserIndex === -1) {
+        const newUser = {
+          id: data.sub,
+          name: data.name,
+          firstName: data.given_name,
+          lastName: data.family_name,
+          email: data.email,
+          emailVerified: data.email_verified,
+          picture: data.picture,
+        };
 
-  google.accounts.id.prompt(); // também exibe o diálogo do One Tap
-}
+        userList.push(newUser);
+
+        localStorage.setItem('users', JSON.stringify(userList));
+        this.currentUser = newUser;
+        localStorage.setItem('currentUser', JSON.stringify(newUser));
+
+        console.log('Usuário adicionado à lista e armazenado no localStorage.');
+      } else {
+        this.currentUser = userList[existingUserIndex];
+        localStorage.setItem('currentUser', JSON.stringify(userList[existingUserIndex]));
+
+        console.log('Usuário já existente. Carregando informações do localStorage.');
+
+        window.location.href = 'faq.html';
+      }
+    },
+  },
+});
+
+
+
+
 
