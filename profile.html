@@ -11,7 +11,7 @@
     <title>Profile | Magpie Nest</title>
 
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="images/magpielogo.png" />
 
     <!-- Bootstrap icons e CSS-->
     <link
@@ -26,46 +26,35 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
 
-
   <body class="d-flex flex-column">
     <main class="flex-shrink-0">
       <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark"       style="
-      background-image: url(./images/IMG_4412.png);
-      height: 100px;
-      filter: brightness(50%);
-    ">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"> Magpie Nest</a>
-        
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- alterar depois -->
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Feed</a>  
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Home</a>
-              </li>
-              <li class="profile item">
-                <a class="nav-link" href="profile.html">Profile</a>
-              </li>
-          </div>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark header"
+        style="background-image: url(./images/IMG_4412.png); height: 100px"
+      >
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="contact.html">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="portfolio-item.html"
+                >Make Trade</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="container px-5 d-flex justify-content-end">
+          <a href="profile.html">
+            <i class="bi bi-person-fill text-white"></i>
+          </a>
         </div>
       </nav>
 
@@ -104,15 +93,22 @@
                               <h3>Cristiano Ronaldo dos Santos Aveiro</h3>
                               <ul class="list-unstyled">
                                 <li>
-                                  <p class ="e-mail"><strong> E-mail: </strong> paidomessi@gmail.com</p>
+                                  <p class="e-mail">
+                                    <strong> E-mail: </strong>
+                                    paidomessi@gmail.com
+                                  </p>
                                   <i class="fa fa-envelope-o"></i>
                                 </li>
                                 <li>
-                                  <p class ="contact"><strong> Contact: </strong> 987 654 321</p>
+                                  <p class="contact">
+                                    <strong> Contact: </strong> 987 654 321
+                                  </p>
                                   <i class="fa fa-phone"></i>
                                 </li>
                                 <li>
-                                  <p class = "number_of_trades"> <strong> Number of trades made: 85 </strong></p>
+                                  <p class="number_of_trades">
+                                    <strong> Number of trades made: 85 </strong>
+                                  </p>
                                   <i class="fa fa-number_of_trades"></i>
                                 </li>
                               </ul>
@@ -136,7 +132,6 @@
                                     href="#recent_activity"
                                     role="tab"
                                     aria-selected="true"
-                                    
                                     >Recent Activity</a
                                   >
                                   <a
@@ -148,7 +143,7 @@
                                     aria-selected="false"
                                     >History Trade</a
                                   >
-                               
+
                                   <a
                                     class="nav-item nav-link"
                                     id="nav-contact-tab"
@@ -162,18 +157,25 @@
                               </nav>
                               <div class="tab-content" id="nav-tabContent">
                                 <!-- vai ficar o contéudo da tab -->
-                                <div class="tab-pane fade active show" id="recent_activity"
-                                role="tabpanel" aria-labelledby="nav-home-tab">
-                                <div class="trade_list_main">
-                                  <header class="snkr_trade__header">
-                                    <div class="snkr-trade_user">
-                                    <img loading="lazy" class="snkr-trade__avatarimg" src="https://fpfimagehandler.fpf.pt/FPFImageHandler.ashx?type=Person&amp;id=3025217&amp;op=t&amp;w=325&amp;h=378"
-                                    alt="Mosblood">
-                                    </div>
-
-                                  </header>
+                                <div
+                                  class="tab-pane fade active show"
+                                  id="recent_activity"
+                                  role="tabpanel"
+                                  aria-labelledby="nav-home-tab"
+                                >
+                                  <div class="trade_list_main">
+                                    <header class="snkr_trade__header">
+                                      <div class="snkr-trade_user">
+                                        <img
+                                          loading="lazy"
+                                          class="snkr-trade__avatarimg"
+                                          src="https://fpfimagehandler.fpf.pt/FPFImageHandler.ashx?type=Person&amp;id=3025217&amp;op=t&amp;w=325&amp;h=378"
+                                          alt="Mosblood"
+                                        />
+                                      </div>
+                                    </header>
+                                  </div>
                                 </div>
-                              </div>
                               </div>
                             </div>
                           </div>
@@ -201,29 +203,28 @@
         filter: brightness(50%);
       "
     ></footer>
-    
 
     <!-- Script torna possível a seleção de diferentes items na nav-bar -->
     <script>
-      var navItems = document.querySelectorAll('.nav-item');
-      
-      navItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-          navItems.forEach(function(item) {
-            item.classList.remove('active');
+      var navItems = document.querySelectorAll(".nav-item");
+
+      navItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+          navItems.forEach(function (item) {
+            item.classList.remove("active");
           });
-          this.classList.add('active');
+          this.classList.add("active");
         });
       });
     </script>
 
-    <!--JScript que permite trocar de item na nav-bar-->    
+    <!--JScript que permite trocar de item na nav-bar-->
     <script>
-      $(document).ready(function() {
+      $(document).ready(function () {
         // Esconde todas as abas exceto a primeira
         $(".tab-pane").not(":first").hide();
         // Adiciona um manipulador de evento de clique a cada item de navegação
-        $(".nav-item").click(function() {
+        $(".nav-item").click(function () {
           // Remove a classe 'active' de todos os itens de navegação
           $(".nav-item").removeClass("active");
           // Adiciona a classe 'active' ao item de navegação clicado
