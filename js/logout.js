@@ -18,9 +18,12 @@ function verificarUsuarioAtual() {
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
         PermAdmin.style.display = 'none';
-    }else if(currentUser && this.userON.email == "pauloypacheco25@gmail.com"){
+    }else if(currentUser && this.userON.email == "pauloypacheco25@hotmail.com"){
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
+        PermAdmin.style.display = 'block';
+        TradeNav.style.display = 'block';
+        TradeFeed.style.display = 'block';
     }else{
         logoutButton.style.display = 'none'; // Esconde o botão
         iconPerf.style.display = 'none';
