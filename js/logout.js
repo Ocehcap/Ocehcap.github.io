@@ -1,5 +1,5 @@
 function removerItem() {
-    localStorage.removeItem('nomeDoItem');
+    localStorage.removeItem('currentUser');
     alert('Item removido do localStorage!');
     location.reload(); // Recarrega a página
 }
