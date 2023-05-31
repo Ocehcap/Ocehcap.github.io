@@ -11,15 +11,11 @@ new Vue({
   
         if (tradeList) {
           this.trocas = JSON.parse(tradeList);
-  
           // Filtrar as trocas da pessoa atual
           const storedUser = localStorage.getItem('currentUser');
-          if(storedUser){
           const userON = JSON.parse(storedUser);
           const idPessoa = userOn.id; // Substitua pelo nome da pessoa atual
           this.trocasPessoa = this.trocas.filter(troca => troca.userHas.user.id === idPessoa);
-          }
-          this.trocasPessoa = trocasPessoa;
         }
       }
     },
