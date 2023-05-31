@@ -108,6 +108,10 @@ body {
   justify-content: center ;
 }
 
+.navbar-nav li {
+  margin-right: 30px;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
