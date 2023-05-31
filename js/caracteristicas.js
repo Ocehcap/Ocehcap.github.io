@@ -129,7 +129,15 @@ new Vue({
       const storedUser = localStorage.getItem('currentUser');
       const trade = {
         userHas: {
-          user: storedUser,
+          user: {
+            id: storedUser.id,
+            name: storedUser.name,
+            firstName: storedUser.firstName,
+            lastName: storedUser.lastName,
+            email: storedUser.email,
+            emailVerified: storedUser.emailVerified,
+            picture: storedUser.picture
+          },
           SelectedSneaker: this.parseSelectedInfo(selectedInfo1).selectedSneaker,
           StateoftheShoe: this.parseSelectedInfo(selectedInfo1).selectedState,
           SizeoftheShoe: this.parseSelectedInfo(selectedInfo1).selectedSize,
