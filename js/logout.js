@@ -8,11 +8,14 @@ function removerItem() {
 function verificarUsuarioAtual() {
     var currentUser = localStorage.getItem('currentUser');
     var logoutButton = document.getElementById('logoutButton');
+    var iconPerf = document.getElementById('iconPerf');
     
     if (currentUser) {
         logoutButton.style.display = 'block'; // Exibe o botão
+        iconPerf.style.display ='block';
     } else {
         logoutButton.style.display = 'none'; // Esconde o botão
+        iconPerf.style.display = 'none';
     }
 }
 
