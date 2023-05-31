@@ -31,8 +31,11 @@
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
+            <li id="TradeFeed" class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
+            <li id="TradeNav" class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a>
+            </li>
+            <li id="PermAdmin" class="nav-item"><a class="nav-link text-white" href="BO_trade_list.html">Back Office</a>
+            </li>
             <li class="nav-item">
 
             </li>
@@ -131,8 +134,9 @@
                 </div>
               </div>
             </div>
-            <div class="d-grid gap-2 col-3 mx-auto"  style="margin-top: 100px">
-              <button id="adicionarTroca" type="button" class="btn btn-features btn-lg" @click="createTradeAndJump">Create Trade</button>
+            <div class="d-grid gap-2 col-3 mx-auto" style="margin-top: 100px">
+              <button id="adicionarTroca" type="button" class="btn btn-features btn-lg"
+                @click="createTradeAndJump">Create Trade</button>
             </div>
           </div>
         </section>
