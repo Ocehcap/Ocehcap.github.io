@@ -95,8 +95,8 @@
         <div class="boxtroca" v-for="troca in trocasFiltradas" :key="troca.id">
           <div class="top" style="background-image: url('./images/IMG_4412.png')">
             <div class="profile">
-              <div class="circle" :style="`background-image: url(${troca.userHas.SelectedPhotos})`"></div>
-              <span class="name">{{ troca.userHas.nome }}</span>
+              <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+              <span class="name">{{ troca.userHas.user.name }}</span>
             </div>
           </div>
           <div class="bottom">
@@ -105,6 +105,8 @@
               <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
             </div>
             <div class="right"></div>
+            <div>{{ troca.userWants.SizeoftheShoe }}</div>
+            <div>{{ troca.userWants.SizeoftheShoe }}</div>
           </div>
         </div>
       </div>
