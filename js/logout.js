@@ -11,6 +11,8 @@ function verificarUsuarioAtual() {
     var logoutButton = document.getElementById('logoutButton');
     var iconPerf = document.getElementById('iconPerf');
     var PermAdmin = document.getElementById('PermAdmin');
+    var TradeNav = document.getElementById('TradeNav');
+    var TradeFeed = document.getElementById('TradeFeed');
     
     if (currentUser) {
         logoutButton.style.display = 'block'; // Exibe o botão
@@ -23,6 +25,8 @@ function verificarUsuarioAtual() {
         logoutButton.style.display = 'none'; // Esconde o botão
         iconPerf.style.display = 'none';
         PermAdmin.style.display = 'none';
+        TradeNav.style.display = 'none';
+        TradeFeed.style.display = 'none';
     }
 }
 
