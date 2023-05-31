@@ -10923,7 +10923,6 @@ html {
 
 .left,
 .right {
-  flex: 1;
   border-top: 1px solid black;
 }
 
@@ -10934,6 +10933,7 @@ html {
 .right {
   border-left: 1px solid black;
 }
+
 
 .header {
   background-color: rgba(0, 0, 0, 0.7); /* Define a cor de sobreposição com transparência */
