@@ -7,7 +7,7 @@ function removerItem() {
 // Verifica se há um usuário atualmente no localStorage
 function verificarUsuarioAtual() {
     const currentUser = localStorage.getItem('currentUser');
-    userON = JSON.parse(storedUser);
+    userON = JSON.parse(currentUser);
     var logoutButton = document.getElementById('logoutButton');
     var iconPerf = document.getElementById('iconPerf');
     var PermAdmin = document.getElementById('PermAdmin');
