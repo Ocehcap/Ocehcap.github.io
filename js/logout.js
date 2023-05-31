@@ -22,6 +22,7 @@ function verificarUsuarioAtual() {
     }else{
         logoutButton.style.display = 'none'; // Esconde o botão
         iconPerf.style.display = 'none';
+        PermAdmin.style.display = 'none';
     }
 }
 
