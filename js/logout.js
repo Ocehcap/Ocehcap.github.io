@@ -1,7 +1,7 @@
 function removerItem() {
     localStorage.removeItem('currentUser');
     alert('Item removido do localStorage!');
-    window.open('faq.html', '_self'); 
+    window.open('index.html', '_self'); 
 }
 
 // Verifica se há um usuário atualmente no localStorage
