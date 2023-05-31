@@ -178,7 +178,7 @@ new Vue({
     },
     createTradeAndJump() {
       this.createTrade();
-      window.open('faq.html', '_blank');
+      window.open('faq.html', '_self');
     },
   },
 });
