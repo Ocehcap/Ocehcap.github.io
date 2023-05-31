@@ -1,285 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Make Trade | Magpie Nest</title>
-  </head>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="images/magpielogo.png" />
-  <!-- Bootstrap icons-->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="css/styles.css" rel="stylesheet" />
 
-  <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-        <div class="header container-fluid px-5 d-flex justify-content-end mt-auto" style="position: fixed; top: 0; background-image: url('./images/IMG_4412.png');">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <img class="img-fluid rounded-3 my-2.5" src="images\logo_sem_fundo.png" style="width: 30px; height: auto;">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Make Trade | Magpie Nest</title>
+</head>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="images/magpielogo.png" />
+<!-- Bootstrap icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/styles.css" rel="stylesheet" />
 
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">MAGPIE NEST</a></li>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
-                    <li class="nav-item">
-                       
-                    </li>
-                </ul> 
-                <a href="profile.html">
-                            <i id="iconPerf" class="bi bi-person-fill text-white"></i>
-                        </a>
-                        <button id="logoutButton" onclick="removerItem()">Logout</button>
-            </div>
-        </div>
-    </nav>
-    
+<body class="d-flex flex-column h-100">
+  <main class="flex-shrink-0">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+      <div class="header container-fluid px-5 d-flex justify-content-end mt-auto"
+        style="position: fixed; top: 0; background-image: url('./images/IMG_4412.png');">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <img class="img-fluid rounded-3 my-2.5" src="images\logo_sem_fundo.png" style="width: 30px; height: auto;">
 
-      <!-- Page Content-->
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">MAGPIE NEST</a></li>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
+            <li class="nav-item">
 
-      <section class="py-5">
-        <div class="container px-5 my-5">
-          <div class="text-center mb-5">
-            <h1 class="fw-bolder">Trade</h1>
-          </div>
-          <div class="boxtroca">
-            <div
-              class="top"
-              style="background-image: url('./images/IMG_4412.png')"
-            >
-              <div class="profile">
-                <span class="name">Your Trade</span>
-              </div>
-            </div>
-            <div id="listaSneakers">
-              <div class="bottom">
-                <div class="left">
-                  <div class="row justify-content-center">
-                    <div class="col-md-6 col-sm-4">
-                      <label for="sneaker1" class="CORlableTRADE"
-                        >Sneaker:</label
-                      >
-                      <select id="sneaker1" class="form-select selectTRADE">
-                        <option selected>Select an option</option>
-                        <option
-                          v-for="sneaker in sneakers"
-                          :value="sneaker.name"
-                          :key="sneaker.name"
-                        >
-                          {{ sneaker.name }}
-                        </option>
-                      </select>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                      <button
-                        id="adicionarPOP1"
-                        class="btn btn-custom"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                      ></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="right">
-                  <div class="row justify-content-center">
-                    <div class="col-md-6 col-sm-4">
-                      <label for="sneaker2" class="CORlableTRADE"
-                        >Sneaker:</label
-                      >
-                      <select id="sneaker2" class="form-select selectTRADE">
-                        <option selected>Select an option</option>
-                        <option
-                          v-for="sneaker in sneakers"
-                          :value="sneaker.name"
-                          :key="sneaker.name"
-                        >
-                          {{ sneaker.name }}
-                        </option>
-                      </select>
-                    </div>
-                    <div class="col-md-2 col-sm-4">
-                      <button
-                        id="adicionarPOP2"
-                        class="btn btn-custom"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                      ></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                {{ selectedSneaker }}
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <h2>Sneaker Features</h2>
-              <p>
-                This pop-up will be useful to describe your sneakers' features,
-                including state, size, and whether it has a box or not.
-              </p>
-              <div class="col-md-6 col-sm-4">
-                <label for="state" class="CORlableTRADE"
-                  >State of the shoe?</label
-                >
-                <select id="state" class="form-select selectTRADE">
-                  <option selected>Select an option</option>
-                  <option value="FN">Factory New</option>
-                  <option value="BU">Barely Used</option>
-                  <option value="UFT">Used Few Times</option>
-                  <option value="S">Shabby</option>
-                </select>
-              </div>
-              <br />
-              <div class="col-md-6 col-sm-4">
-                <label for="size" class="CORlableTRADE"
-                  >Size of the shoe?</label
-                >
-                <select id="size" class="form-select selectTRADE">
-                  <option selected>Select an option</option>
-                  <option value="35">35</option>
-                  <option value="35,5">35,5</option>
-                  <option value="35">35</option>
-                  <option value="35,5">35,5</option>
-                  <option value="36">36</option>
-                  <option value="36,5">36,5</option>
-                  <option value="37">37</option>
-                  <option value="37,5">37,5</option>
-                  <option value="38">38</option>
-                  <option value="38,5">38,5</option>
-                  <option value="39">39</option>
-                  <option value="39,5">39,5</option>
-                  <option value="40">40</option>
-                  <option value="40,5">40,5</option>
-                  <option value="41">41</option>
-                  <option value="41,5">41,5</option>
-                  <option value="42">42</option>
-                  <option value="42,5">42,5</option>
-                  <option value="43">43</option>
-                  <option value="43,5">43,5</option>
-                  <option value="44">44</option>
-                  <option value="44,5">44,5</option>
-                  <option value="45">45</option>
-                  <option value="45,5">45,5</option>
-                  <option value="46">46</option>
-                  <option value="46,5">46,5</option>
-                </select>
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="shoeBoxQuestion">Does your shoe have a box?</label>
-                <div class="form-check">
-                  <input
-                    class="form-check-input custom-radio"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Yes
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input custom-radio"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    No
-                  </label>
-                </div>
-              </div>
-              <br />
-              <div class="form-group">
-                <label for="inputGroupFile04"
-                  >Add photos that prove the authenticity (receipt) and that the
-                  sneakers are in the condition mentioned here:</label
-                >
-                <div class="input-group">
-                  <input
-                    type="file"
-                    class="form-control"
-                    id="inputGroupFile04"
-                    aria-describedby="inputGroupFileAddon04"
-                    aria-label="Upload"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    id="inputGroupFileAddon04"
-                  >
-                    Button
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-features">Submit</button>
-            </div>
-          </div>
+            </li>
+          </ul>
+          <a href="profile.html">
+            <i class="bi bi-person-fill text-white"></i>
+          </a>
         </div>
       </div>
+    </nav>
+    <!-- Page Content-->
 
-      <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
-      <script src="js/listaSneakers.js"></script>
-      <script src="js/caracteristicas.js"></script>
-      <script src="js/logout.js"></script>
+    <body class="d-flex flex-column h-100">
+      <main class="flex-shrink-0">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+          <div class="header container-fluid px-5 d-flex justify-content-end mt-auto"
+            style="position: fixed; top: 0; background-image: url('./images/IMG_4412.png');">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <img class="img-fluid rounded-3 my-2.5" src="images\logo_sem_fundo.png"
+                style="width: 30px; height: auto;">
 
-      <!-- Footer-->
-      <footer
-        class="bg-dark py-4 mt-auto"
-        style="
-          background-image: url(C:/Users/franc/Desktop/202/PW_202/images/IMG_4412.png);
-          filter: brightness(50%);
-        "
-      ></footer>
-      <!-- Bootstrap core JS-->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    </main>
-  </body>
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">MAGPIE NEST</a></li>
+                </li>
+              </ul>
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
+                <li class="nav-item">
+
+                </li>
+              </ul>
+              <a href="profile.html">
+                <i class="bi bi-person-fill text-white"></i>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+
+        <!-- Page Content-->
+
+        <section class="py-5">
+          <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+              <h1 class="fw-bolder">Trade</h1>
+            </div>
+            <div class="boxtroca">
+              <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                <div class="profile">
+                  <span class="name">Your Trade</span>
+                </div>
+              </div>
+              <div id="listaSneakers">
+                <div class="bottom">
+                  <div class="left">
+                    <div class="row justify-content-center">
+                      <div class="col-md-6 col-sm-4">
+                        <label for="sneaker1" class="CORlableTRADE">Sneaker:</label>
+                        <select id="sneaker1" class="form-select selectTRADE">
+                          <option selected>Select an option</option>
+                          <option v-for="sneaker in sneakers" :value="sneaker.name" :key="sneaker.name">{{ sneaker.name
+                            }}
+                          </option>
+                        </select>
+                      </div>
+                      <div class="col-md-2 col-sm-4">
+                        <button id="adicionarPOP1" class="btn btn-custom" data-bs-toggle="modal"
+                          data-bs-target="#exampleModal1"></button>
+                      </div>
+                    </div>
+                    <div class="selected-info" id="selected-info1"></div>
+                  </div>
+                  <div class="right">
+                    <div class="row justify-content-center">
+                      <div class="col-md-6 col-sm-4">
+                        <label for="sneaker2" class="CORlableTRADE">Sneaker:</label>
+                        <select id="sneaker2" class="form-select selectTRADE">
+                          <option selected>Select an option</option>
+                          <option v-for="sneaker in sneakers" :value="sneaker.name" :key="sneaker.name">{{ sneaker.name
+                            }}
+                          </option>
+                        </select>
+                      </div>
+                      <div class="col-md-2 col-sm-4">
+                        <button id="adicionarPOP2" class="btn btn-custom" data-bs-toggle="modal"
+                          data-bs-target="#exampleModal2"></button>
+                      </div>
+                    </div>
+                    <div class="selected-info" id="selected-info2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto"  style="margin-top: 100px">
+              <button id="adicionarTroca" type="button" class="btn btn-features btn-lg" @click="createTradeAndJump">Create Trade</button>
+            </div>
+          </div>
+        </section>
+
+
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">{{ selectedSneaker }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h2>Sneaker Features</h2>
+                <p>This pop-up will be useful to describe your sneakers' features, including state, size,
+                  and
+                  whether it has a box or not.</p>
+                <div class="col-md-6 col-sm-4">
+                  <label for="stateDoTrade1" class="CORlableTRADE">State of the shoe?</label>
+                  <select id="stateDoTrade1" class="form-select selectTRADE">
+                    <option selected>Select an option</option>
+                    <option value="FN">Factory New</option>
+                    <option value="BU">Barely Used</option>
+                    <option value="UFT">Used Few Times</option>
+                    <option value="S">Shabby</option>
+                  </select>
+                </div>
+                <br>
+                <div class="col-md-6 col-sm-4">
+                  <label for="sizeDoTrade1" class="CORlableTRADE">Size of the shoe?</label>
+                  <select id="sizeDoTrade1" class="form-select selectTRADE">
+                    <option selected>Select an option</option>
+                    <option value="35">35</option>
+                    <option value="35,5">35,5</option>
+                    <option value="35">35</option>
+                    <option value="35,5">35,5</option>
+                    <option value="36">36</option>
+                    <option value="36,5">36,5</option>
+                    <option value="37">37</option>
+                    <option value="37,5">37,5</option>
+                    <option value="38">38</option>
+                    <option value="38,5">38,5</option>
+                    <option value="39">39</option>
+                    <option value="39,5">39,5</option>
+                    <option value="40">40</option>
+                    <option value="40,5">40,5</option>
+                    <option value="41">41</option>
+                    <option value="41,5">41,5</option>
+                    <option value="42">42</option>
+                    <option value="42,5">42,5</option>
+                    <option value="43">43</option>
+                    <option value="43,5">43,5</option>
+                    <option value="44">44</option>
+                    <option value="44,5">44,5</option>
+                    <option value="45">45</option>
+                    <option value="45,5">45,5</option>
+                    <option value="46">46</option>
+                    <option value="46,5">46,5</option>
+                  </select>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="shoeBoxQuestion">Does your shoe have a box?</label>
+                  <div class="form-check">
+                    <input class="form-check-input custom-radio" type="radio" name="flexRadioDefault"
+                      id="boxDoTradeYes1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input custom-radio" type="radio" name="flexRadioDefault"
+                      id="boxDoTradeNo1">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                  </div>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="fotoDoTrade1">Add photos that prove the authenticity (receipt) and that
+                    the
+                    sneakers are in the condition mentioned here:</label>
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="fotoDoTrade1" aria-describedby="inputGroupFileAddon04"
+                      aria-label="Upload">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-features">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">{{ selectedSneaker }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h2>Sneaker Features</h2>
+                <p>This pop-up will be useful to describe your sneakers' features, including state, size,
+                  and
+                  whether it has a box or not.</p>
+                <div class="col-md-6 col-sm-4">
+                  <label for="stateDoTrade2" class="CORlableTRADE">State of the shoe?</label>
+                  <select id="stateDoTrade2" class="form-select selectTRADE">
+                    <option selected>Select an option</option>
+                    <option value="FN">Factory New</option>
+                    <option value="BU">Barely Used</option>
+                    <option value="UFT">Used Few Times</option>
+                    <option value="S">Shabby</option>
+                  </select>
+                </div>
+                <br>
+                <div class="col-md-6 col-sm-4">
+                  <label for="sizeDoTrade2" class="CORlableTRADE">Size of the shoe?</label>
+                  <select id="sizeDoTrade2" class="form-select selectTRADE">
+                    <option selected>Select an option</option>
+                    <option value="35">35</option>
+                    <option value="35,5">35,5</option>
+                    <option value="35">35</option>
+                    <option value="35,5">35,5</option>
+                    <option value="36">36</option>
+                    <option value="36,5">36,5</option>
+                    <option value="37">37</option>
+                    <option value="37,5">37,5</option>
+                    <option value="38">38</option>
+                    <option value="38,5">38,5</option>
+                    <option value="39">39</option>
+                    <option value="39,5">39,5</option>
+                    <option value="40">40</option>
+                    <option value="40,5">40,5</option>
+                    <option value="41">41</option>
+                    <option value="41,5">41,5</option>
+                    <option value="42">42</option>
+                    <option value="42,5">42,5</option>
+                    <option value="43">43</option>
+                    <option value="43,5">43,5</option>
+                    <option value="44">44</option>
+                    <option value="44,5">44,5</option>
+                    <option value="45">45</option>
+                    <option value="45,5">45,5</option>
+                    <option value="46">46</option>
+                    <option value="46,5">46,5</option>
+                  </select>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="shoeBoxQuestion">Does your shoe have a box?</label>
+                  <div class="form-check">
+                    <input class="form-check-input custom-radio" type="radio" name="flexRadioDefault"
+                      id="boxDoTradeYes2">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input custom-radio" type="radio" name="flexRadioDefault"
+                      id="boxDoTradeNo2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      No
+                    </label>
+                  </div>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="fotoDoTrade2">Add photos that prove the authenticity (receipt) and that
+                    the
+                    sneakers are in the condition mentioned here:</label>
+                    <input type="file" id="imageUpload">
+                    <button onclick="uploadImage()">Upload Image</button>
+                    <div id="imageContainer"></div>
+                    
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="submitButton" class="btn btn-primary" @click="submitForm">Submit</button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+        <script src="js/listaSneakers.js"></script>
+        <script src="js/caracteristicas.js"></script>
+        <script src="js/upload.js"></script>
+
+
+
+
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      </main>
+    </body>
+    <footer class="bg-dark py-0 mt-auto"></footer>
+    <div class="mr-4">
+      <img src="./images/Footer.jpg" alt="footer Image" style="width:100%; height:auto;">
+    </div>
+    </footer>
+
 </html>
