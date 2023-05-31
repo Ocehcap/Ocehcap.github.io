@@ -34,4 +34,4 @@ function verificarUsuarioAtual() {
 }
 
 // Chama a função para verificar o usuário atual ao carregar a página
-window.onload = verificarUsuarioAtual;
+window.onload = verificarUsuarioAtual();
