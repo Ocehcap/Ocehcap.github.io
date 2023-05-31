@@ -62,11 +62,8 @@
               </ul>
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
-                <li id="TradeFeed" class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
-                <li id="TradeNav" class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading
-                    Room</a></li>
-                <li id="PermAdmin" class="nav-item"><a class="nav-link text-white" href="BO_trade_list.html">Back
-                    Office</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
                 <li class="nav-item">
 
                 </li>
@@ -133,9 +130,8 @@
                 </div>
               </div>
             </div>
-            <div class="d-grid gap-2 col-3 mx-auto" style="margin-top: 100px">
-              <button id="adicionarTroca" type="button" class="btn btn-features btn-lg"
-                @click="createTradeAndJump">Create Trade</button>
+            <div class="d-grid gap-2 col-3 mx-auto"  style="margin-top: 100px">
+              <button id="adicionarTroca" type="button" class="btn btn-features btn-lg" @click="createTradeAndJump">Create Trade</button>
             </div>
           </div>
         </section>
@@ -313,22 +309,19 @@
                   <label for="fotoDoTrade2">Add photos that prove the authenticity (receipt) and that
                     the
                     sneakers are in the condition mentioned here:</label>
-                  <input type="file" id="imageUpload">
-                  <button onclick="uploadImage()">Upload Image</button>
-                  <div id="imageContainer"></div>
-
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="fotoDoTrade2" aria-describedby="inputGroupFileAddon04"
+                      aria-label="Upload">
+                  </div>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button id="submitButton" class="btn btn-primary" @click="submitForm">Submit</button>
-
-
+                <button type="button" class="btn btn-features">Submit</button>
               </div>
             </div>
           </div>
         </div>
-
         <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
         <script src="js/listaSneakers.js"></script>
         <script src="js/caracteristicas.js"></script>
