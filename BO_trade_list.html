@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>BO trade list | Magie Nest</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -87,29 +87,44 @@
                             <button class="btn btn-outline-dark" type="submit">Search</button>
                         </form>
                     </div>
-                    <div class="boxtroca" v-for="troca in trocasFiltradas" :key="troca.id">
-                        <div class="top" :style="`background-image: url(${troca.imagem})`">
-                            <div class="profile">
+                    <div class="boxtroca_func">
+                        <div class="boxtroca m-1">
+                            <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                                <div class="profile" style="margin-right: 400px;">
+                                    <div class="circle"
+                                        style="background-image: url(&quot;./images/PERFILCR7.jpg&quot;);">
+                                    </div>
+                                    <span class="name">Cristiano Ronaldo</span>
+                                </div>
+
+                                <div class="profile">
+                                    <div class="circle"
+                                        style="background-image: url(&quot;./images/PERFILCR7.jpg&quot;);">
+                                    </div>
+                                    <span class="name">Cristiano Ronaldo</span>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="left">
+                                </div>
+                                <div class="right"></div>
                             </div>
                         </div>
-                        <div class="bottom">
-                            <div class="left">
-                            </div>
-                            <div class="right"></div>
-                        </div>
-                        <div class="d-flex justify-content-end">
-                            <div class="card me-3" style="width: 5rem;">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">3879</li>
-                                </ul>
-                            </div>
-                            <div class="btn-group col-2" role="group" aria-label="Basic mixed styles example">
-                                <button class="btn btn-success" type="button">Accept</button>
-                                <button class="btn btn-danger" type="button">Refuse</button>
+                        <div class="func" style="margin-top: 10px;">
+                            <div class="d-flex justify-content-end">
+                                <div class="card me-3" style="width: 5rem;">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">3879</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group col-2" role="group" aria-label="Basic mixed styles example">
+                                    <button class="btn btn-success" type="button">Accept</button>
+                                    <button class="btn btn-danger" type="button">Refuse</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-grid gap-2 col-3 mx-auto">
+                    <div class="d-grid gap-2 col-3 mx-auto" style="margin-top: 100px">
                         <button type="button" class="btn btn-secondary btn-lg">Load more</button>
                     </div>
                 </div>
@@ -119,7 +134,7 @@
         <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
         <script src="js/scripts.js"></script>
         <!-- Footer-->
-        <footer class="bg-dark py-4 mt-auto">
+        <footer class="bg-dark py-4 mt-auto header" style="background-image: url('./images/IMG_4412.png')">
             <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div class="col-auto">
