@@ -10923,6 +10923,7 @@ html {
 
 .left,
 .right {
+  flex: 1;
   border-top: 1px solid black;
 }
 

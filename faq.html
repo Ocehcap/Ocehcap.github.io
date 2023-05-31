@@ -49,7 +49,7 @@
           <div class="col-2 selectFILTROS">
             <label for="pesquisa" class="CORlableFILTROS">Search:</label>
             <input id="pesquisa" class="form-control" v-model="termoPesquisa" placeholder="Digite o nome da sapatilha">
-          </div>          
+          </div>
           <div class="col-2 selectFILTROS">
             <label for="tamanho" class="CORlableFILTROS">Size:</label>
             <select id="tamanho" class="form-select" v-model="filtroTamanho">
@@ -129,9 +129,10 @@
                 <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
                 <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
               </div>
-              <div class="right"></div>
-              <div>{{ troca.userWants.SizeoftheShoe }}</div>
-              <div>{{ troca.userWants.SelectedSneaker }}</div>
+              <div class="right">
+                <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                <div>{{ troca.userWants.SelectedSneaker }}</div>
+              </div>
             </div>
           </div>
         </div>
