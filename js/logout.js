@@ -18,7 +18,7 @@ function verificarUsuarioAtual() {
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
         PermAdmin.style.display = 'none';
-    }else if(currentUser && this.userON.email == "pauloypacheco25@gmail.com"){
+    }else if(currentUser && (this.userON.email == "pauloypacheco25@gmail.com"||this.userON.email == "alexandreantuneswork@gmail.com")){
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
     }else{
