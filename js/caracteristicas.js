@@ -126,10 +126,10 @@ new Vue({
     createTrade() {
       const selectedInfo1 = document.getElementById('selected-info1').innerHTML;
       const selectedInfo2 = document.getElementById('selected-info2').innerHTML;
-
+      const storedUser = localStorage.getItem('currentUser');
       const trade = {
         userHas: {
-          nome: "",
+          user: storedUser,
           SelectedSneaker: this.parseSelectedInfo(selectedInfo1).selectedSneaker,
           StateoftheShoe: this.parseSelectedInfo(selectedInfo1).selectedState,
           SizeoftheShoe: this.parseSelectedInfo(selectedInfo1).selectedSize,
@@ -137,7 +137,7 @@ new Vue({
           SelectedPhotos: this.parseSelectedInfo(selectedInfo1).selectedPhotos,
         },
         userWants: {
-          nome: "",
+          user: storedUser,
           SelectedSneaker: this.parseSelectedInfo(selectedInfo2).selectedSneaker,
           StateoftheShoe: this.parseSelectedInfo(selectedInfo2).selectedState,
           SizeoftheShoe: this.parseSelectedInfo(selectedInfo2).selectedSize,
@@ -155,14 +155,14 @@ new Vue({
         .replace(/<\/?[^>]+(>|$)/g, '') // Remover tags HTML
         .trim(); // Remover espaços em branco no início e no fim
 
-      const infoArray = parsedInfo.split('\n        ').filter(info => info !== ''); // Separar as informações em tópicos
+      const infoArray = parsedInfo.split(/\s{2,}/).filter(info => info !== ''); // Separar as informações em tópicos
 
       const tradeInfo = {
-        selectedSneaker: infoArray[0],
-        selectedState: infoArray[1],
-        selectedSize: infoArray[2],
-        selectedHasBox: infoArray[3],
-        selectedPhotos: infoArray[4],
+        selectedSneaker: infoArray[0].split(':')[1].trim(),
+        selectedState: infoArray[1].split(':')[1].trim(),
+        selectedSize: infoArray[2].split(':')[1].trim(),
+        selectedHasBox: infoArray[3].split(':')[1].trim(),
+        selectedPhotos: infoArray[4].split(':')[1].trim(),
       };
 
       return tradeInfo;

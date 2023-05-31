@@ -42,92 +42,75 @@
       </div>
   </nav>
 
-    <div id="app">
-      <div class="filtros header" style="margin-top: 24px; position: fixed; width: 100%; z-index: 1000; ">
-        <div class="row justify-content-end">
-          <div class="col-md-3 col-sm-4 selectFILTROS">
-            <label for="tamanho" class="CORlableFILTROS">Tamanho:</label>
-            <select id="tamanho" class="form-select" v-model="filtroTamanho">
-              <option selected value="">Todos</option>
-              <option value="35">35</option>
-              <option value="35,5">35,5</option>
-              <option value="36">36</option>
-              <option value="36,5">36,5</option>
-              <option value="37">37</option>
-              <option value="37,5">37,5</option>
-              <option value="38">38</option>
-              <option value="38,5">38,5</option>
-              <option value="39">39</option>
-              <option value="39,5">39,5</option>
-              <option value="40">40</option>
-              <option value="40,5">40,5</option>
-              <option value="41">41</option>
-              <option value="41,5">41,5</option>
-              <option value="42">42</option>
-              <option value="42,5">42,5</option>
-              <option value="43">43</option>
-              <option value="43,5">43,5</option>
-              <option value="44">44</option>
-              <option value="44,5">44,5</option>
-              <option value="45">45</option>
-              <option value="45,5">45,5</option>
-              <option value="46">46</option>
-              <option value="46,5">46,5</option>
-            </select>
+  <div id="app">
+    <div class="filtros header" style="margin-top: 24px; position: fixed; width: 100%; z-index: 1000;">
+      <div class="row justify-content-end">
+        <div class="col-md-3 col-sm-4 selectFILTROS">
+          <label for="tamanho" class="CORlableFILTROS">Tamanho:</label>
+          <select id="tamanho" class="form-select" v-model="filtroTamanho">
+            <option selected value="">Todos</option>
+            <option value="35">35</option>
+            <option value="35,5">35,5</option>
+            <option value="36">36</option>
+            <!-- Restante das opções de tamanho -->
+          </select>
         </div>
-          <div class="col-md-3 col-sm-4 selectFILTROS">
-            <label for="marca" class="CORlableFILTROS">Marca:</label>
-            <select id="marca" class="form-select" v-model="filtroMarca">
-              <option selected value="">Todas</option>
-              <option value="Nike">Nike</option>
-              <option value="Adidas">Adidas</option>
-              <option value="Puma">Puma</option>
-            </select>
+        <div class="col-md-3 col-sm-4 selectFILTROS">
+          <label for="marca" class="CORlableFILTROS">Marca:</label>
+          <select id="marca" class="form-select" v-model="filtroMarca">
+            <option selected value="">Todas</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Puma">Puma</option>
+            <!-- Restante das opções de marca -->
+          </select>
+        </div>
+        <div class="col-md-3 col-sm-4 selectFILTROS">
+          <label for="cor" class="CORlableFILTROS">Cor:</label>
+          <select id="cor" class="form-select" v-model="filtroCor">
+            <option selected value="">Todas</option>
+            <option value="Preto">Preto</option>
+            <option value="Branco">Branco</option>
+            <option value="Vermelho">Vermelho</option>
+            <option value="Azul">Azul</option>
+            <!-- Restante das opções de cor -->
+          </select>
+        </div>
+        <div class="col-md-2 col-sm-4">
+          <button id="filtrar" class="btn btn-filtrar float-right" @click="aplicarFiltros">Filtrar</button>
+        </div>
+      </div>
+    </div>
+  
+    <section class="py-5">
+      <div class="container px-5 my-5">
+        <div class="text-center mb-5" style="margin-top: 100px;">
+          <h1 class="fw-bolder">Wanna make a trade?</h1>
+          <p class="lead fw-normal text-muted mb-0">CHECK IT OUT WHAT'S NEW</p>
+        </div>
+        <h2 class="fw-bolder mb-3">Available Trades:
+          <button class="btn btn-features float-end" onclick="window.location.href = 'make_trade.html';">Create Trade</button>
+        </h2>
+        <br>
+        <div class="boxtroca" v-for="troca in trocasFiltradas" :key="troca.id">
+          <div class="top" style="background-image: url('./images/IMG_4412.png')">
+            <div class="profile">
+              <div class="circle" :style="`background-image: url(${troca.userHas.SelectedPhotos})`"></div>
+              <span class="name">{{ troca.userHas.nome }}</span>
+            </div>
           </div>
-          <div class="col-md-3 col-sm-4 selectFILTROS">
-            <label for="cor" class="CORlableFILTROS">Cor:</label>
-            <select id="cor" class="form-select" v-model="filtroCor">
-              <option selected value="">Todas</option>
-              <option value="Preto">Preto</option>
-              <option value="Branco">Branco</option>
-              <option value="Vermelho">Vermelho</option>
-              <option value="Azul">Azul</option>
-            </select>
-        </div>
-          <div class="col-md-2 col-sm-4">
-            <button id="filtrar" class="btn btn-filtrar float-right" @click="aplicarFiltros">Filtrar</button>
+          <div class="bottom">
+            <div class="left">
+              <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+              <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
+            </div>
+            <div class="right"></div>
           </div>
         </div>
       </div>
-
-      <section class="py-5">
-        <div class="container px-5 my-5">
-          <div class="text-center mb-5" style="margin-top: 100px;">
-            <h1 class="fw-bolder">Wanna make a trade?</h1>
-            <p class="lead fw-normal text-muted mb-0">CHECK IT OUT WHAT'S NEW</p>
-          </div>
-          <h2 class="fw-bolder mb-3">Available Trades:
-            <button class="btn btn-features float-end" onclick="window.location.href = 'make_trade.html';">Create Trade</button>
-          </h2>
-          <br>
-          <div class="boxtroca" v-for="troca in trocasFiltradas" :key="troca.id">
-            <div class="top" :style="`background-image: url(${troca.imagem})`">
-              <div class="profile">
-                <div class="circle" :style="`background-image: url(${troca.perfil})`"></div>
-                <span class="name">{{ troca.nome }}</span>
-              </div>
-            </div>
-            <div class="bottom">
-              <div class="left">
-                <div class="tamanho">{{ troca.tamanho }}</div>
-                <div class="marca">{{ troca.marca }}</div>
-              </div>
-              <div class="right"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </section>
+  </div>
+  
     
     <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
     <script src="js/scripts.js"></script>
