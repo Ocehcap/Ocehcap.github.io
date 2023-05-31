@@ -6,11 +6,19 @@ function removerItem() {
 
 // Verifica se há um usuário atualmente no localStorage
 function verificarUsuarioAtual() {
-    var currentUser = localStorage.getItem('currentUser');
+
+    //if(this.userON.email == "pauloypacheco25@gmail.com");
+    const currentUser = localStorage.getItem('currentUser');
+    userON = JSON.parse(storedUser);
     var logoutButton = document.getElementById('logoutButton');
     var iconPerf = document.getElementById('iconPerf');
+    var PermAdmin = document.getElementById('PermAdmin');
     
     if (currentUser) {
+        logoutButton.style.display = 'block'; // Exibe o botão
+        iconPerf.style.display ='block';
+        PermAdmin.style.display = 'none';
+    }else if(currentUser || this.userON.email == "pauloypacheco25@gmail.com"){
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
     } else {
