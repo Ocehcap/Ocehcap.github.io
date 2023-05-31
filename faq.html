@@ -19,29 +19,31 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-      <div class="header container-fluid px-5 d-flex justify-content-end mt-auto"
-        style="position: fixed; top: 0; background-image: url('./images/IMG_4412.png'); z-index: 1000;">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <img class="img-fluid rounded-3 my-2.5" src="images\logo_sem_fundo.png" style="width: 30px; height: auto; ">
+      <div class="header container-fluid px-5 d-flex justify-content-end mt-auto" style="position: fixed; top: 0; background-image: url('./images/IMG_4412.png');">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <img class="img-fluid rounded-3 my-2.5" src="images\logo_sem_fundo.png" style="width: 30px; height: auto;">
 
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item"><a class="nav-link text-white" href="index.html">MAGPIE NEST</a></li>
-            </li>
-          </ul>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
-            <li class="nav-item">
-
-            </li>
-          </ul>
-          <a href="profile.html">
-            <i class="bi bi-person-fill text-white"></i>
-          </a>
-        </div>
+              <ul class="navbar-nav me-auto">
+                  <li class="nav-item"><a class="nav-link text-white" href="index.html">MAGPIE NEST</a></li>
+                  </li>
+              </ul>
+              <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
+                  <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
+                  <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
+                  <li class="nav-item">
+                     
+                  </li>
+              </ul> 
+              <a href="profile.html">
+                          <i id="iconPerf" class="bi bi-person-fill text-white"></i>
+                      </a>
+                      <button id="logoutButton" onclick="removerItem()">Logout</button>
+          </div>
       </div>
-    </nav>
+  </nav>
+  
+  
 
     <div id="app">
       <div class="filtros header" style="margin-top: 24px; position: fixed; width: 100%; z-index: 1000;">
@@ -142,6 +144,7 @@
 
     <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/logout.js"></script>
 
   </main>
   <!-- Footer-->
