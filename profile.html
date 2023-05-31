@@ -73,36 +73,38 @@
                     <!-- user profile section -->
                     <!-- profile image -->
                     <div class="col-lg-12">
-                      <div class="full dis_flex center_text">
-                        <div class="profile_img">
-                          <img width="180" class="rounded-circle"
-                            src="https://fpfimagehandler.fpf.pt/FPFImageHandler.ashx?type=Person&amp;id=3025217&amp;op=t&amp;w=325&amp;h=378"
-                            alt="#" />
-                        </div>
-                        <div class="profile_contant">
-                          <div class="contact_inner">
-                            <h3>Cristiano Ronaldo dos Santos Aveiro</h3>
-                            <ul class="list-unstyled">
-                              <li>
-                                <p class="e-mail">
-                                  <strong> E-mail: </strong>
-                                  paidomessi@gmail.com
-                                </p>
-                                <i class="fa fa-envelope-o"></i>
-                              </li>
-                              <li>
-                                <p class="contact">
-                                  <strong> Contact: </strong> 987 654 321
-                                </p>
-                                <i class="fa fa-phone"></i>
-                              </li>
-                              <li>
-                                <p class="number_of_trades">
-                                  <strong> Number of trades made: 85 </strong>
-                                </p>
-                                <i class="fa fa-number_of_trades"></i>
-                              </li>
-                            </ul>
+                      <div id="app1">
+                        <div class="full dis_flex center_text" v-for="user in userON">
+                          <div class="profile_img">
+                            <img width="180" class="rounded-circle"
+                              src="user.picture"
+                              alt="#" />
+                          </div>
+                          <div class="profile_contant">
+                            <div class="contact_inner">
+                              <h3>{{ user.name }}</h3>
+                              <ul class="list-unstyled">
+                                <li>
+                                  <p class="e-mail">
+                                    <strong> E-mail: </strong>
+                                    {{ user.email }}
+                                  </p>
+                                  <i class="fa fa-envelope-o"></i>
+                                </li>
+                                <li>
+                                  <p class="contact">
+                                    <strong> Contact: </strong> 987 654 321
+                                  </p>
+                                  <i class="fa fa-phone"></i>
+                                </li>
+                                <li>
+                                  <p class="number_of_trades">
+                                    <strong> Number of trades made: 85 </strong>
+                                  </p>
+                                  <i class="fa fa-number_of_trades"></i>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>

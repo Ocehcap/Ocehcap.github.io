@@ -1,4 +1,20 @@
 new Vue({
+    el: '#app1', // Use uma ID diferente para a segunda instância do Vue
+    data: {
+        userON: {}
+    },
+    methods: {
+      getUserFromLocalStorage() {
+          const storedUser = localStorage.getItem('currentUser');
+          this.userON = JSON.parse(storedUser);
+      }
+    },
+    created() {
+      this.getUserFromLocalStorage();
+    }
+  });
+
+new Vue({
     el: '#app2', // Use uma ID diferente para a segunda instância do Vue
     data: {
       filtroPessoa: '',
