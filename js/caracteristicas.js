@@ -120,7 +120,7 @@ new Vue({
 new Vue({
   el: '#adicionarTroca',
   data: {
-    tradeList: [], // Lista de trocas
+    tradeList: JSON.parse(localStorage.getItem('tradeList')) || [], // Lista de trocas
   },
   methods: {
     createTrade() {
