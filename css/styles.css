@@ -109,7 +109,9 @@ body {
 }
 
 .navbar-nav li {
-  margin-right: 30px;
+  
+   margin-right: 30px;
+
 }
 
 hr {
@@ -3759,7 +3761,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x); 
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -3893,7 +3895,7 @@ textarea.form-control-lg {
     position: static;
     z-index: auto;
     flex-grow: 1;
-    width: auto !important;
+    width: auto;
     height: auto !important;
     visibility: visible !important;
     background-color: transparent !important;
