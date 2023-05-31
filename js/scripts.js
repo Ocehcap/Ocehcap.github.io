@@ -2,8 +2,11 @@ new Vue({
   el: '#app',
   data: {
     filtroTamanho: '',
-    filtroMarca: '',
+    filtroCaixa: '',
     filtroCor: '',
+    filtroEstado: '',
+    filtroMarca: '',
+    termoPesquisa: '',
     trocas: [],
     trocasFiltradas: []
   },
@@ -15,8 +18,17 @@ new Vue({
         trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.SizeoftheShoe === this.filtroTamanho);
       }
 
-      if (this.filtroMarca !== '') {
-        trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.SelectedSneaker === this.filtroMarca);
+      if (this.filtroCaixa !== '') {
+        trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.HasBox === this.filtroCaixa);
+      }
+
+      if (this.filtroEstado !== '') {
+        trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.StateoftheShoe === this.filtroEstado);
+      }
+
+      if (this.termoPesquisa !== '') {
+        const termoBusca = this.termoPesquisa.toLowerCase();
+        trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.SelectedSneaker.toLowerCase().includes(termoBusca));
       }
 
       this.trocasFiltradas = trocasFiltradas;
