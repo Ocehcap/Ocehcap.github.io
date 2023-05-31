@@ -74,7 +74,7 @@
                     <!-- profile image -->
                     <div class="col-lg-12">
                       <div id="app1">
-                        <div class="full dis_flex center_text" v-for="user in userON">
+                        <div class="full dis_flex center_text">
                           <div class="profile_img">
                             <img width="180" class="rounded-circle"
                               src="user.picture"
@@ -82,12 +82,12 @@
                           </div>
                           <div class="profile_contant">
                             <div class="contact_inner">
-                              <h3>{{ user.name }}</h3>
+                              <h3>{{ userON.name }}</h3>
                               <ul class="list-unstyled">
                                 <li>
                                   <p class="e-mail">
                                     <strong> E-mail: </strong>
-                                    {{ user.email }}
+                                    {{ userON.email }}
                                   </p>
                                   <i class="fa fa-envelope-o"></i>
                                 </li>
