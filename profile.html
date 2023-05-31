@@ -29,34 +29,31 @@
   <body class="d-flex flex-column">
     <main class="flex-shrink-0">
       <!-- Navigation-->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark header"
-        style="background-image: url(./images/IMG_4412.png); height: 100px"
-      >
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="about.html">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="contact.html">Feed</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="make_trade.html"
-                >Make Trade</a
-              >
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+        <div class="header container-fluid px-5 d-flex justify-content-end mt-auto" style="position: fixed; top: 0; background-image: url('./images/IMG_4412.png');">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <img class="img-fluid rounded-3 my-2.5" src="images\logo_sem_fundo.png" style="width: 30px; height: auto;">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">MAGPIE NEST</a></li>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="faq.html">Feed</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="make_trade.html">Trading Room</a></li>
+                    <li class="nav-item">
+                       
+                    </li>
+                </ul> 
+                <a href="profile.html">
+                            <i class="bi bi-person-fill text-white"></i>
+                        </a>
+            </div>
         </div>
-        <div class="container px-5 d-flex justify-content-end">
-          <a href="profile.html">
-            <i class="bi bi-person-fill text-white"></i>
-          </a>
-        </div>
-      </nav>
+    </nav>
+    
 
       <!-- Page Content-->
       <div class="midde_cont">
@@ -131,7 +128,7 @@
                                     data-toggle="tab"
                                     href="#recent_activity"
                                     role="tab"
-                                    aria-selected="true"
+                                    aria-selected="true";
                                     >Recent Activity</a
                                   >
                                   <a
@@ -196,13 +193,11 @@
       </div>
     </main>
     <!-- Footer-->
-    <footer
-      class="bg-dark py-4 mt-auto"
-      style="
-        background-image: url(./images/IMG_4412.png);
-        filter: brightness(50%);
-      "
-    ></footer>
+    <footer class="bg-dark py-0 mt-auto"></footer>
+    <div class="mr-4">
+        <img src="./images/Footer.jpg" alt="footer Image" style="width:100%; height:auto;">
+    </div>
+    </footer>
 
     <!-- Script torna possível a seleção de diferentes items na nav-bar -->
     <script>
