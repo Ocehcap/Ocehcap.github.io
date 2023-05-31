@@ -127,16 +127,17 @@ new Vue({
       const selectedInfo1 = document.getElementById('selected-info1').innerHTML;
       const selectedInfo2 = document.getElementById('selected-info2').innerHTML;
       const storedUser = localStorage.getItem('currentUser');
+      const userON = JSON.parse(storedUser);
       const trade = {
         userHas: {
           user: {
-            id: storedUser.id,
-            name: storedUser.name,
-            firstName: storedUser.firstName,
-            lastName: storedUser.lastName,
-            email: storedUser.email,
-            emailVerified: storedUser.emailVerified,
-            picture: storedUser.picture
+            id: userON.id,
+            name: userON.name,
+            firstName: userON.firstName,
+            lastName: userON.lastName,
+            email: userON.email,
+            emailVerified: userON.emailVerified,
+            picture: userON.picture
           },
           SelectedSneaker: this.parseSelectedInfo(selectedInfo1).selectedSneaker,
           StateoftheShoe: this.parseSelectedInfo(selectedInfo1).selectedState,
