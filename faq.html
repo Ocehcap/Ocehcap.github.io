@@ -143,7 +143,9 @@
                   </div>
                 </div>
               </div>
-              <button id="want" class="btn btn-features btnBOX" @click="AcceptTrade()">Want</button>
+              <div v-for="(troca, index) in trocasFiltradas" :key="troca.id">
+                <button id="want" class="btn btn-features btnBOX" @click="AcceptTrade(index)">Want</button>
+              </div>
             </div>
           </div>
         </div>

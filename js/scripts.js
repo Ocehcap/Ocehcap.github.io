@@ -43,12 +43,12 @@ new Vue({
         this.trocas = JSON.parse(tradeList);
       }
     },
-    AcceptTrade() {
+    AcceptTrade(index) {
       const storedUser = localStorage.getItem('currentUser');
       const userON = JSON.parse(storedUser);
 
       // Update the userWants object with the desired user information
-      this.trocasFiltradas.userWants.user = {
+      this.trocasFiltradas[index].userWants.user = {
         id: userON.id,
         name: userON.name,
         firstName: userON.firstName,
