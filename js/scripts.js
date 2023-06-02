@@ -46,9 +46,9 @@ new Vue({
     AcceptTrade(index) {
       const storedUser = localStorage.getItem('currentUser');
       const userON = JSON.parse(storedUser);
-
-      // Update the userWants object with the desired user information
-      this.trocasFiltradas[index].userWants.user = {
+    
+      // Atualizar o objeto userWants com as informações do usuário desejado
+      this.trocas[index].userWants.user = {
         id: userON.id,
         name: userON.name,
         firstName: userON.firstName,
@@ -57,6 +57,9 @@ new Vue({
         emailVerified: userON.emailVerified,
         picture: userON.picture
       };
+    
+      // Armazenar as trocas atualizadas no localStorage
+      localStorage.setItem('tradeList', JSON.stringify(this.trocas));
     }
   },
   created() {
