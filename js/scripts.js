@@ -44,12 +44,10 @@ new Vue({
       }
     },
     AcceptTrade(index) {
-      
       const storedUser = localStorage.getItem('currentUser');
       const userON = JSON.parse(storedUser);
     
       // Atualizar o objeto userWants com as informações do usuário desejado
-      console.log(this.trocas[index])
       this.trocasFiltradas[index].userWants.user = {
         id: userON.id,
         name: userON.name,
@@ -60,9 +58,19 @@ new Vue({
         picture: userON.picture
       };
     
+      const trocaAtualizada = this.trocasFiltradas[index];
+    
+      // Procurar a troca correspondente no array this.trocas
+      const trocaIndex = this.trocas.findIndex(troca => troca.id === trocaAtualizada.id);
+    
+      if (trocaIndex !== -1) {
+        // Substituir a troca antiga pela troca atualizada
+        this.trocas.splice(trocaIndex, 1, trocaAtualizada);
+      }
+    
       // Armazenar as trocas atualizadas no localStorage
-      localStorage.setItem('tradeList', JSON.stringify(this.trocasFiltradas));
-    }
+      localStorage.setItem('tradeList', JSON.stringify(this.trocas));
+    }    
   },
   created() {
     this.getTrocasFromLocalStorage();
