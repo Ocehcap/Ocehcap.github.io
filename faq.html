@@ -129,7 +129,7 @@
                 <div class="boxtroca" style="width: 70%; height: 200px; margin-right: 10px;">
                   <div class="top" style="background-image: url('./images/IMG_4412.png')">
                     <div class="profile">
-                      <div class="circle" style="background-image: url({{ troca.userHas.user.picture }})"></div>
+                      <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
                       <span class="name">{{ troca.userHas.user.name }}</span>
                     </div>
                   </div>
