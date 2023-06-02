@@ -11057,19 +11057,14 @@ html {
   text-align: left;
 }
 
-.button-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.button-container button {
+.btnBOX {
   width: 100%;
+  max-width: 1313px;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 
