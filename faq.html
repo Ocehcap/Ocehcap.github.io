@@ -125,7 +125,7 @@
           <br>
           <div class="row d-flex justify-content-between">
             <div v-for="troca in trocasFiltradas" :key="troca.id" class="col-12">
-              <div class="boxtroca " style="position: relative;">
+              <div class="boxtroca">
                 <div class="top" style="background-image: url('./images/IMG_4412.png')">
                   <div class="profile">
                     <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
@@ -143,7 +143,7 @@
                   </div>
                 </div>
               </div>
-              <button id="want" class="btn btn-features btnBOX" style="position: absolute; bottom: 0;">Want</button>
+              <button id="want" class="btn btn-primary btnBOX">Want</button>
             </div>
           </div>
         </div>
