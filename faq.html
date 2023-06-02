@@ -123,30 +123,32 @@
               Trade</button>
           </h2>
           <br>
-          <div v-for="troca in trocasFiltradas" :key="troca.id">
-            <div class="boxtroca">
-              <div class="top" style="background-image: url('./images/IMG_4412.png')">
-                <div class="profile">
-                  <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
-                  <span class="name">{{ troca.userHas.user.name }}</span>
+          <div class="row">
+            <div v-for="troca in trocasFiltradas" :key="troca.id" class="col-12">
+              <div class="boxtroca">
+                <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                  <div class="profile">
+                    <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                    <span class="name">{{ troca.userHas.user.name }}</span>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="left">
+                    <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                    <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
+                  </div>
+                  <div class="right">
+                    <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                    <div>{{ troca.userWants.SelectedSneaker }}</div>
+                  </div>
                 </div>
               </div>
-              <div class="bottom">
-                <div class="left">
-                  <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
-                  <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
-                </div>
-                <div class="right">
-                  <div>{{ troca.userWants.SizeoftheShoe }}</div>
-                  <div>{{ troca.userWants.SelectedSneaker }}</div>
-                </div>
-              </div>
+              <button id="want" class="btn btn-primary float-end mt-2">Want</button>
             </div>
-            <button id="want">Want</button>
           </div>
         </div>
       </section>
-    </div>
+      
 
 
     <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
