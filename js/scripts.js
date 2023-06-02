@@ -13,24 +13,27 @@ new Vue({
   methods: {
     aplicarFiltros() {
       let trocasFiltradas = this.trocas;
-
+  
       if (this.filtroTamanho !== '') {
         trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.SizeoftheShoe === this.filtroTamanho);
       }
-
+  
       if (this.filtroCaixa !== '') {
         trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.HasBox === this.filtroCaixa);
       }
-
+  
       if (this.filtroEstado !== '') {
         trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.StateoftheShoe === this.filtroEstado);
       }
-
+  
       if (this.termoPesquisa !== '') {
         const termoBusca = this.termoPesquisa.toLowerCase();
         trocasFiltradas = trocasFiltradas.filter(troca => troca.userHas.SelectedSneaker.toLowerCase().includes(termoBusca));
       }
-
+  
+      // Adicionar condição para filtrar trocas com troca.userWants.user vazio
+      trocasFiltradas = trocasFiltradas.filter(troca => troca.userWants.user === '');
+  
       this.trocasFiltradas = trocasFiltradas;
     },
     getTrocasFromLocalStorage() {
