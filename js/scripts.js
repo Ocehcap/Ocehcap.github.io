@@ -32,7 +32,7 @@ new Vue({
       }
   
       // Adicionar condição para filtrar trocas com troca.userWants.user vazio
-      trocasFiltradas = trocasFiltradas.filter(troca => troca.userWants.user === '');
+      trocasFiltradas = trocasFiltradas.filter(troca => troca.userWants.user === null);
   
       this.trocasFiltradas = trocasFiltradas;
     },
