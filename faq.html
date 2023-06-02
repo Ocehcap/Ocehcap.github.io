@@ -119,35 +119,37 @@
             <p class="lead fw-normal text-muted mb-0">CHECK IT OUT WHAT'S NEW</p>
           </div>
           <h2 class="fw-bolder mb-3">Available Trades:
-            <button class="btn btn-features float-end" onclick="window.location.href = 'make_trade.html';">Create
-              Trade</button>
+            <button class="btn btn-features float-end" onclick="window.location.href = 'make_trade.html';">Create Trade</button>
           </h2>
           <br>
           <div class="row">
             <div v-for="troca in trocasFiltradas" :key="troca.id" class="col-12">
-              <div class="boxtroca">
-                <div class="top" style="background-image: url('./images/IMG_4412.png')">
-                  <div class="profile">
-                    <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
-                    <span class="name">{{ troca.userHas.user.name }}</span>
+              <div class="d-flex justify-content-between">
+                <div class="boxtroca">
+                  <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                    <div class="profile">
+                      <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                      <span class="name">{{ troca.userHas.user.name }}</span>
+                    </div>
+                  </div>
+                  <div class="bottom">
+                    <div class="left">
+                      <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                      <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
+                    </div>
+                    <div class="right">
+                      <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                      <div>{{ troca.userWants.SelectedSneaker }}</div>
+                    </div>
                   </div>
                 </div>
-                <div class="bottom">
-                  <div class="left">
-                    <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
-                    <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
-                  </div>
-                  <div class="right">
-                    <div>{{ troca.userWants.SizeoftheShoe }}</div>
-                    <div>{{ troca.userWants.SelectedSneaker }}</div>
-                  </div>
-                </div>
+                <button id="want" class="btn btn-primary">Want</button>
               </div>
-              <button id="want" class="btn btn-primary float-end mt-2">Want</button>
             </div>
           </div>
         </div>
       </section>
+      
       
 
 
