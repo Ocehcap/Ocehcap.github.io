@@ -146,7 +146,7 @@ new Vue({
           SelectedPhotos: this.parseSelectedInfo(selectedInfo1).selectedPhotos,
         },
         userWants: {
-          user: storedUser,
+          user: "",
           SelectedSneaker: this.parseSelectedInfo(selectedInfo2).selectedSneaker,
           StateoftheShoe: this.parseSelectedInfo(selectedInfo2).selectedState,
           SizeoftheShoe: this.parseSelectedInfo(selectedInfo2).selectedSize,
