@@ -39,6 +39,21 @@ new Vue({
       if (tradeList) {
         this.trocas = JSON.parse(tradeList);
       }
+    },
+    AcceptTrade() {
+      const storedUser = localStorage.getItem('currentUser');
+      const userON = JSON.parse(storedUser);
+
+      // Update the userWants object with the desired user information
+      this.trocasFiltradas.userWants.user = {
+        id: userON.id,
+        name: userON.name,
+        firstName: userON.firstName,
+        lastName: userON.lastName,
+        email: userON.email,
+        emailVerified: userON.emailVerified,
+        picture: userON.picture
+      };
     }
   },
   created() {
