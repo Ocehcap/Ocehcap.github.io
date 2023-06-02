@@ -121,6 +121,7 @@ new Vue({
   el: '#adicionarTroca',
   data: {
     tradeList: JSON.parse(localStorage.getItem('tradeList')) || [], // Lista de trocas
+    nextTradeId: 1 // Próximo ID da troca
   },
   methods: {
     createTrade() {
@@ -129,6 +130,7 @@ new Vue({
       const storedUser = localStorage.getItem('currentUser');
       const userON = JSON.parse(storedUser);
       const trade = {
+        id: this.nextTradeId, // ID da troca
         userHas: {
           user: {
             id: userON.id,
@@ -157,6 +159,9 @@ new Vue({
 
       this.tradeList.push(trade);
       localStorage.setItem('tradeList', JSON.stringify(this.tradeList));
+
+      this.nextTradeId++; // Incrementar o próximo ID da troca
+      localStorage.setItem('nextTradeId', this.nextTradeId.toString()); // Salvar o próximo ID no armazenamento local
     },
     parseSelectedInfo(selectedInfo) {
       const parsedInfo = selectedInfo
@@ -181,7 +186,14 @@ new Vue({
       window.open('faq.html', '_self');
     },
   },
+  mounted() {
+    const storedNextTradeId = localStorage.getItem('nextTradeId');
+    if (storedNextTradeId) {
+      this.nextTradeId = parseInt(storedNextTradeId);
+    }
+  },
 });
+
 
   
   
