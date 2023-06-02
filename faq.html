@@ -119,16 +119,17 @@
             <p class="lead fw-normal text-muted mb-0">CHECK IT OUT WHAT'S NEW</p>
           </div>
           <h2 class="fw-bolder mb-3">Available Trades:
-            <button class="btn btn-features float-end" onclick="window.location.href = 'make_trade.html';">Create Trade</button>
+            <button class="btn btn-features float-end" onclick="window.location.href = 'make_trade.html';">Create
+              Trade</button>
           </h2>
           <br>
           <div class="row">
             <div v-for="troca in trocasFiltradas" :key="troca.id" class="col-12">
-              <div class="d-flex justify-content-between">
-                <div class="boxtroca">
+              <div class="d-flex align-items-center">
+                <div class="boxtroca" style="width: 70%; height: 200px; margin-right: 10px;">
                   <div class="top" style="background-image: url('./images/IMG_4412.png')">
                     <div class="profile">
-                      <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                      <div class="circle" style="background-image: url({{ troca.userHas.user.picture }})"></div>
                       <span class="name">{{ troca.userHas.user.name }}</span>
                     </div>
                   </div>
@@ -143,7 +144,7 @@
                     </div>
                   </div>
                 </div>
-                <button id="want" class="btn btn-primary">Want</button>
+                <button id="want" class="btn btn-primary btn-block" style="height: 200px;">Want</button>
               </div>
             </div>
           </div>
