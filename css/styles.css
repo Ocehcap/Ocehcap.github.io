@@ -11057,6 +11057,21 @@ html {
   text-align: left;
 }
 
+.button-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.button-container button {
+  width: 100%;
+}
+
 
 
 
