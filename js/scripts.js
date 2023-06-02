@@ -50,7 +50,7 @@ new Vue({
     
       // Atualizar o objeto userWants com as informações do usuário desejado
       console.log(this.trocas[index])
-      this.trocas[index].userWants.user = {
+      this.trocasFiltradas[index].userWants.user = {
         id: userON.id,
         name: userON.name,
         firstName: userON.firstName,
@@ -61,7 +61,7 @@ new Vue({
       };
     
       // Armazenar as trocas atualizadas no localStorage
-      localStorage.setItem('tradeList', JSON.stringify(this.trocas));
+      localStorage.setItem('tradeList', JSON.stringify(this.trocasFiltradas));
     }
   },
   created() {
