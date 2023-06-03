@@ -2,6 +2,7 @@ new Vue({
     el: '#app', // Use uma ID diferente para a segunda instância do Vue
     data: {
         filtroPessoa: '',
+        termoPesquisa: '',
         trocas: [],
         trocasPessoa: [] // Array para armazenar as trocas da pessoa
     },
