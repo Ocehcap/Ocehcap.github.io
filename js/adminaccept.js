@@ -22,7 +22,7 @@ new Vue({
         AcceptTrade(index) {
             this.trocasPessoa[index].accept = true;
 
-            const trocaAtualizada = this.trocasFiltradas[index];
+            const trocaAtualizada = this.trocasPessoaFiltro[index];
 
             // Procurar a troca correspondente no array this.trocas
             const trocaIndex = this.trocas.findIndex(troca => troca.id === trocaAtualizada.id);
@@ -37,7 +37,7 @@ new Vue({
             window.location.reload();
         },
         RefuseTrade(index) {
-            const trocaAtualizada = this.trocasFiltradas[index];
+            const trocaAtualizada = this.trocasPessoaFiltro[index];
 
             // Procurar a troca correspondente no array this.trocas
             const trocaIndex = this.trocas.findIndex(troca => troca.id === trocaAtualizada.id);
