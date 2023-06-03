@@ -131,6 +131,7 @@ new Vue({
       const userON = JSON.parse(storedUser);
       const trade = {
         id: this.nextTradeId, // ID da troca
+        accept: false,
         userHas: {
           user: {
             id: userON.id,
