@@ -7,7 +7,7 @@ function removerItem() {
 // Verifica se há um usuário atualmente no localStorage
 function verificarUsuarioAtual() {
     const currentUser = localStorage.getItem('currentUser');
-    userON = JSON.parse(currentUser);
+    const userON = JSON.parse(currentUser);
     var logoutButton = document.getElementById('logoutButton');
     var iconPerf = document.getElementById('iconPerf');
     var PermAdmin = document.getElementById('PermAdmin');
@@ -18,7 +18,7 @@ function verificarUsuarioAtual() {
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
         PermAdmin.style.display = 'none';
-    }else if(currentUser && this.userON.email == "pauloypacheco25@gmail.com"){
+    }else if(currentUser && userON.email == "pauloypacheco25@gmail.com"){
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
         PermAdmin.style.display = 'block';
