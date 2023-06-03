@@ -55,7 +55,9 @@ new Vue({
             const tradeList = localStorage.getItem('tradeList');
 
             if (tradeList) {
-                this.trocas = JSON.parse(tradeList);
+		        this.trocas = JSON.parse(tradeList);
+                this.trocasPessoa = this.trocas;
+                // Filtrar as trocas da pessoa atual
                 const storedUser = localStorage.getItem('currentUser');
                 const userON = JSON.parse(storedUser);
                 const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
