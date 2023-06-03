@@ -70,6 +70,7 @@ new Vue({
     
       // Armazenar as trocas atualizadas no localStorage
       localStorage.setItem('tradeList', JSON.stringify(this.trocas));
+      window.location.reload();
     }    
   },
   created() {
