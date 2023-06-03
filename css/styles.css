@@ -10934,6 +10934,12 @@ html {
   border-left: 1px solid black;
 }
 
+.topleft,
+.topright {
+  flex: 1;
+}
+
+
 
 .header {
   background-color: rgba(0, 0, 0, 0.7); /* Define a cor de sobreposição com transparência */
