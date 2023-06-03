@@ -14,11 +14,11 @@ function verificarUsuarioAtual() {
     var TradeNav = document.getElementById('TradeNav');
     var TradeFeed = document.getElementById('TradeFeed');
     
-    if (currentUser) {
+    if (currentUser && userON.email !== "pauloypacheco25@gmail.com") {
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
         PermAdmin.style.display = 'none';
-    }else if(currentUser && userON.email == "pauloypacheco25@gmail.com"){
+    }else if(currentUser && userON.email === "pauloypacheco25@gmail.com"){
         logoutButton.style.display = 'block'; // Exibe o botão
         iconPerf.style.display ='block';
         PermAdmin.style.display = 'block';
