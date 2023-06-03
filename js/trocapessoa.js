@@ -27,11 +27,12 @@ new Vue({
   
         if (tradeList) {
           this.trocas = JSON.parse(tradeList);
+          this.trocasPessoa = this.trocas;
           // Filtrar as trocas da pessoa atual
           const storedUser = localStorage.getItem('currentUser');
           const userON = JSON.parse(storedUser);
           const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
-          this.trocasPessoa = this.trocas.filter(troca => troca.userHas.user.id === idPessoa);
+          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa);
         }
       }
     },
@@ -53,12 +54,13 @@ new Vue({
   
         if (tradeList) {
           this.trocas = JSON.parse(tradeList);
+          this.trocasPessoa = this.trocas;
           // Filtrar as trocas da pessoa atual
           const storedUser = localStorage.getItem('currentUser');
           const userON = JSON.parse(storedUser);
           const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
-          this.trocasPessoa = this.trocas.filter(troca => troca.userWants.user !== null);
-          this.trocasPessoa = this.trocas.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
+          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
+          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
 
         }
       }
@@ -82,13 +84,14 @@ new Vue({
   
         if (tradeList) {
           this.trocas = JSON.parse(tradeList);
+          this.trocasPessoa = this.trocas;
           // Filtrar as trocas da pessoa atual
           const storedUser = localStorage.getItem('currentUser');
           const userON = JSON.parse(storedUser);
           const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
-          this.trocasPessoa = this.trocas.filter(troca => troca.userWants.user !== null);
-          this.trocasPessoa = this.trocas.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
-          this.trocasPessoa = this.trocas.filter(troca => troca.accept === true);
+          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
+          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
+          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === true);
         }
       }
     },
