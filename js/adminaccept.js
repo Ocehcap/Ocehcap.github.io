@@ -9,6 +9,13 @@ new Vue({
     methods: {
         aplicarFiltros() {
             let trocasPessoa = this.trocas;
+            // Filtrar as trocas da pessoa atual
+            const storedUser = localStorage.getItem('currentUser');
+            const userON = JSON.parse(storedUser);
+            const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
+            this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
+            this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
+            this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === false);
 
             if (this.termoPesquisa !== '') {
                 const termoBusca = this.termoPesquisa.toLowerCase();
@@ -54,15 +61,6 @@ new Vue({
 
             if (tradeList) {
                 this.trocas = JSON.parse(tradeList);
-                this.trocasPessoa = this.trocas;
-                // Filtrar as trocas da pessoa atual
-                const storedUser = localStorage.getItem('currentUser');
-                const userON = JSON.parse(storedUser);
-                const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
-                this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
-                this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
-                this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === false);
-
             }
         }
     },
