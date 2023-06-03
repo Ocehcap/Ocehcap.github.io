@@ -11075,6 +11075,14 @@ html {
   margin-bottom: 100px;
 }
 
+.btn-filtrar-white {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #fff !important;
+  border-radius: 30px !important;
+}
 
 
 
