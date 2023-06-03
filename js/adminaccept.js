@@ -6,6 +6,16 @@ new Vue({
         trocasPessoa: [] // Array para armazenar as trocas da pessoa
     },
     methods: {
+        aplicarFiltros() {
+            let trocasPessoa = this.trocas;
+
+            if (this.termoPesquisa !== '') {
+                const termoBusca = this.termoPesquisa.toLowerCase();
+                trocasPessoa = trocasPessoa.filter(troca => troca.id.includes(termoBusca));
+            }
+
+            this.trocasPessoa = trocasPessoa;
+        },
         AcceptTrade(index) {
             this.trocasPessoa[index].accept = true;
 
@@ -25,15 +35,15 @@ new Vue({
         },
         RefuseTrade(index) {
             const trocaAtualizada = this.trocasFiltradas[index];
-        
+
             // Procurar a troca correspondente no array this.trocas
             const trocaIndex = this.trocas.findIndex(troca => troca.id === trocaAtualizada.id);
-        
+
             if (trocaIndex !== -1) {
                 // Remover a troca atualizada do array this.trocas
                 this.trocas.splice(trocaIndex, 1);
             }
-        
+
             // Armazenar as trocas atualizadas no localStorage
             localStorage.setItem('tradeList', JSON.stringify(this.trocas));
             window.location.reload();
