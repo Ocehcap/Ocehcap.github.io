@@ -11078,9 +11078,9 @@ html {
 .btn-filtrar-white {
   margin-top: 25px;
   margin-bottom: 15px;
-  background-color: #fff !important;
-  color: #000 !important;
-  border-color: #fff !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
   border-radius: 30px !important;
 }
 
