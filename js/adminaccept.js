@@ -63,7 +63,7 @@ new Vue({
                 this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
                 this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === false);
             }
-            console(trocasPessoa);
+            console(this.trocasPessoa);
         }
     },
     created() {
