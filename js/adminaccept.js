@@ -2,28 +2,10 @@ new Vue({
     el: '#app', // Use uma ID diferente para a segunda instância do Vue
     data: {
         filtroPessoa: '',
-        termoPesquisa: '',
         trocas: [],
         trocasPessoa: [] // Array para armazenar as trocas da pessoa
     },
     methods: {
-        aplicarFiltros() {
-            let trocasPessoa = this.trocas;
-            // Filtrar as trocas da pessoa atual
-            const storedUser = localStorage.getItem('currentUser');
-            const userON = JSON.parse(storedUser);
-            const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
-            this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
-            this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
-            this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === false);
-
-            if (this.termoPesquisa !== '') {
-                const termoBusca = this.termoPesquisa.toLowerCase();
-                trocasPessoa = trocasPessoa.filter(troca => troca.id.includes(termoBusca));
-            }
-
-            this.trocasPessoa = trocasPessoa;
-        },
         AcceptTrade(index) {
             this.trocasPessoa[index].accept = true;
 
@@ -43,15 +25,15 @@ new Vue({
         },
         RefuseTrade(index) {
             const trocaAtualizada = this.trocasFiltradas[index];
-
+        
             // Procurar a troca correspondente no array this.trocas
             const trocaIndex = this.trocas.findIndex(troca => troca.id === trocaAtualizada.id);
-
+        
             if (trocaIndex !== -1) {
                 // Remover a troca atualizada do array this.trocas
                 this.trocas.splice(trocaIndex, 1);
             }
-
+        
             // Armazenar as trocas atualizadas no localStorage
             localStorage.setItem('tradeList', JSON.stringify(this.trocas));
             window.location.reload();
@@ -61,11 +43,19 @@ new Vue({
 
             if (tradeList) {
                 this.trocas = JSON.parse(tradeList);
+                this.trocasPessoa = this.trocas;
+                // Filtrar as trocas da pessoa atual
+                const storedUser = localStorage.getItem('currentUser');
+                const userON = JSON.parse(storedUser);
+                const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
+                this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
+                this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
+                this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === false);
+
             }
         }
     },
     created() {
         this.getTrocasFromLocalStorage();
-        this.aplicarFiltros();
     }
 });
