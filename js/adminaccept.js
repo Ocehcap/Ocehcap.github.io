@@ -14,7 +14,7 @@ new Vue({
             console.log(trocasPessoaFiltro);
             if (this.termoPesquisa !== '') {
                 const termoBusca = this.termoPesquisa.toLowerCase();
-                trocasPessoaFiltro = trocasPessoaFiltro.filter(troca => troca.id.toLowerCase().includes(termoBusca));
+                trocasPessoaFiltro = trocasPessoaFiltro.filter(troca => String(troca.id).toLowerCase().includes(termoBusca));
             }
             console.log(trocasPessoaFiltro);
             this.trocasPessoaFiltro = trocasPessoaFiltro;
