@@ -130,7 +130,6 @@
                             </nav>
                             <div class="tab-content" id="nav-tabContent">
                               <!-- vai ficar o contéudo da tab -->
-                              <div id="app2">
                                 <div class="tab-pane fade active show" id="recent_activity" role="tabpanel"
                                   aria-labelledby="nav-home-tab">
                                   <div id="app2">
@@ -159,7 +158,62 @@
                                     </section>
                                   </div>
                                 </div>
-                              </div>
+                                <div class="tab-pane fade active show" id="history_trade" role="tabpanel"
+                                  aria-labelledby="nav-home-tab">
+                                  <div id="app3">
+                                    <section class="py-5">
+                                      <div class="container px-5 my-5">
+                                        <div class="boxtroca" v-for="troca in trocasPessoa" :key="troca.id">
+                                          <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                                            <div class="profile">
+                                              <div class="circle"
+                                                :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                                              <span class="name">{{ troca.userHas.user.name }}</span>
+                                            </div>
+                                          </div>
+                                          <div class="bottom">
+                                            <div class="left">
+                                              <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                                              <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
+                                            </div>
+                                            <div class="right">
+                                              <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                                              <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
+                                  </div>
+                                </div>
+                                <div class="tab-pane fade active show" id="trade_offers" role="tabpanel"
+                                  aria-labelledby="nav-home-tab">
+                                  <div id="app4">
+                                    <section class="py-5">
+                                      <div class="container px-5 my-5">
+                                        <div class="boxtroca" v-for="troca in trocasPessoa" :key="troca.id">
+                                          <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                                            <div class="profile">
+                                              <div class="circle"
+                                                :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                                              <span class="name">{{ troca.userHas.user.name }}</span>
+                                            </div>
+                                          </div>
+                                          <div class="bottom">
+                                            <div class="left">
+                                              <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                                              <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
+                                            </div>
+                                            <div class="right">
+                                              <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                                              <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
+                                  </div>
+                                </div>
                             </div>
                           </div>
                           <!-- end user profile section -->
