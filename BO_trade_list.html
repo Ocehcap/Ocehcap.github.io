@@ -97,65 +97,66 @@
         </nav>
 
         <div id="app">
-            <section class="py-5">
-                <div class="container px-5 my-5">
-                    <div class="text-center mb-5">
-                        <h2 class="fw-bolder">Trades waiting for confirmation</h2>
-                    </div>
-                    <div style="padding-bottom: 50px;">
-                        <form class="d-flex">
-                            <input class="form-control custom-input me-2" v-model="termoPesquisa"
-                                placeholder="Trade ID">
-                            <button class="btn btn-outline-dark" type="submit">Search</button>
-                        </form>
-                    </div>
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Trades waiting for confirmation</h2>
                 </div>
-                <div class="ESPACO" v-for="(troca, index) in trocasPessoa" :key="troca.id" class="col-12">
-                    <div class="boxtroca">
-                        <div class="top" style="background-image: url('./images/IMG_4412.png')">
-                            <div class=topleft>
-                                <div class="profile">
-                                    <div class="circle" :style="`background-image: url(${troca.userHas.user.picture})`">
+                <div style="padding-bottom: 50px;">
+                    <form class="d-flex">
+                        <input class="form-control custom-input me-2" v-model="termoPesquisa" placeholder="Trade ID">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+                </div>
+                <section class="py-5">
+                    <div class="ESPACO" v-for="(troca, index) in trocasPessoa" :key="troca.id" class="col-12">
+                        <div class="boxtroca">
+                            <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                                <div class=topleft>
+                                    <div class="profile">
+                                        <div class="circle"
+                                            :style="`background-image: url(${troca.userHas.user.picture})`">
+                                        </div>
+                                        <span class="name">{{ troca.userHas.user.name }}</span>
                                     </div>
-                                    <span class="name">{{ troca.userHas.user.name }}</span>
+                                </div>
+                                <div class=topright>
+                                    <div class="profile">
+                                        <div class="circle"
+                                            :style="`background-image: url(${troca.userWants.user.picture})`">
+                                        </div>
+                                        <span class="name">{{ troca.userWants.user.name }}</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class=topright>
-                                <div class="profile">
-                                    <div class="circle"
-                                        :style="`background-image: url(${troca.userWants.user.picture})`">
-                                    </div>
-                                    <span class="name">{{ troca.userWants.user.name }}</span>
+                            <div class="bottom">
+                                <div class="left">
+                                    <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                                    <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
+                                </div>
+                                <div class="right">
+                                    <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                                    <div>{{ troca.userWants.SelectedSneaker }}</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bottom">
-                            <div class="left">
-                                <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
-                                <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
-                            </div>
-                            <div class="right">
-                                <div>{{ troca.userWants.SizeoftheShoe }}</div>
-                                <div>{{ troca.userWants.SelectedSneaker }}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="func" style="margin-top: 10px;">
-                        <div class="d-flex justify-content-end">
-                            <div class="card me-3" style="width: 5rem;">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">{{ troca.id }}</li>
-                                </ul>
-                            </div>
-                            <div class="btn-group col-2" role="group" aria-label="Basic mixed styles example">
-                                <button class="btn btn-success" type="button"
-                                    @click="AcceptTrade(index)">Accept</button>
-                                <button class="btn btn-danger" type="button" @click="RefuseTrade(index)">Refuse</button>
+                        <div class="func" style="margin-top: 10px;">
+                            <div class="d-flex justify-content-end">
+                                <div class="card me-3" style="width: 5rem;">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">{{ troca.id }}</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group col-2" role="group" aria-label="Basic mixed styles example">
+                                    <button class="btn btn-success" type="button"
+                                        @click="AcceptTrade(index)">Accept</button>
+                                    <button class="btn btn-danger" type="button"
+                                        @click="RefuseTrade(index)">Refuse</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
 
         <!-- Footer-->
