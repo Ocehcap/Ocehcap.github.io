@@ -68,5 +68,6 @@ new Vue({
     },
     created() {
         this.getTrocasFromLocalStorage();
+        this.aplicarFiltros();
     }
 });
