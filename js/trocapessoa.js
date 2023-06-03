@@ -61,6 +61,7 @@ new Vue({
           const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
           this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
           this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
+          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === true);
 
         }
       }
@@ -91,7 +92,6 @@ new Vue({
           const idPessoa = userON.id; // Substitua pelo nome da pessoa atual
           this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userWants.user !== null);
           this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
-          this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === true);
         }
       }
     },
