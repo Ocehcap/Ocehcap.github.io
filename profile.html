@@ -135,22 +135,24 @@
                                 <div id="app2">
                                   <section class="py-5">
                                     <div class="container px-5 my-5">
-                                      <div class="boxtroca" v-for="troca in trocasPessoa" :key="troca.id">
-                                        <div class="top" style="background-image: url('./images/IMG_4412.png')">
-                                          <div class="profile">
-                                            <div class="circle"
-                                              :style="`background-image: url(${troca.userHas.user.picture})`"></div>
-                                            <span class="name">{{ troca.userHas.user.name }}</span>
+                                      <div v-for="(troca, index) in trocasPessoa" :key="troca.id" class="col-12">
+                                        <div class="boxtroca">
+                                          <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                                            <div class="profile">
+                                              <div class="circle"
+                                                :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                                              <span class="name">{{ troca.userHas.user.name }}</span>
+                                            </div>
                                           </div>
-                                        </div>
-                                        <div class="bottom">
-                                          <div class="left">
-                                            <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
-                                            <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
-                                          </div>
-                                          <div class="right">
-                                            <div>{{ troca.userWants.SizeoftheShoe }}</div>
-                                            <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                          <div class="bottom">
+                                            <div class="left">
+                                              <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                                              <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
+                                            </div>
+                                            <div class="right">
+                                              <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                                              <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -163,31 +165,34 @@
                                 <div id="app3">
                                   <section class="py-5">
                                     <div class="container px-5 my-5">
-                                      <div class="boxtroca" v-for="troca in trocasPessoa" :key="troca.id">
-                                        <div class="top" style="background-image: url('./images/IMG_4412.png')">
-                                          <div class=topleft>
-                                            <div class="profile">
-                                              <div class="circle"
-                                                :style="`background-image: url(${troca.userHas.user.picture})`"></div>
-                                              <span class="name">{{ troca.userHas.user.name }}</span>
+                                      <div v-for="(troca, index) in trocasPessoa" :key="troca.id" class="col-12">
+                                        <div class="boxtroca">
+                                          <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                                            <div class=topleft>
+                                              <div class="profile">
+                                                <div class="circle"
+                                                  :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                                                <span class="name">{{ troca.userHas.user.name }}</span>
+                                              </div>
+                                            </div>
+                                            <div class=topright>
+                                              <div class="profile">
+                                                <div class="circle"
+                                                  :style="`background-image: url(${troca.userWants.user.picture})`">
+                                                </div>
+                                                <span class="name">{{ troca.userWants.user.name }}</span>
+                                              </div>
                                             </div>
                                           </div>
-                                          <div class=topright>
-                                            <div class="profile">
-                                              <div class="circle"
-                                                :style="`background-image: url(${troca.userWants.user.picture})`"></div>
-                                              <span class="name">{{ troca.userWants.user.name }}</span>
+                                          <div class="bottom">
+                                            <div class="left">
+                                              <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                                              <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
                                             </div>
-                                          </div>
-                                        </div>
-                                        <div class="bottom">
-                                          <div class="left">
-                                            <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
-                                            <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
-                                          </div>
-                                          <div class="right">
-                                            <div>{{ troca.userWants.SizeoftheShoe }}</div>
-                                            <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                            <div class="right">
+                                              <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                                              <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -200,31 +205,34 @@
                                 <div id="app4">
                                   <section class="py-5">
                                     <div class="container px-5 my-5">
-                                      <div class="boxtroca" v-for="troca in trocasPessoa" :key="troca.id">
-                                        <div class="top" style="background-image: url('./images/IMG_4412.png')">
-                                          <div class=topleft>
-                                            <div class="profile">
-                                              <div class="circle"
-                                                :style="`background-image: url(${troca.userHas.user.picture})`"></div>
-                                              <span class="name">{{ troca.userHas.user.name }}</span>
+                                      <div v-for="(troca, index) in trocasPessoa" :key="troca.id" class="col-12">
+                                        <div class="boxtroca">
+                                          <div class="top" style="background-image: url('./images/IMG_4412.png')">
+                                            <div class=topleft>
+                                              <div class="profile">
+                                                <div class="circle"
+                                                  :style="`background-image: url(${troca.userHas.user.picture})`"></div>
+                                                <span class="name">{{ troca.userHas.user.name }}</span>
+                                              </div>
+                                            </div>
+                                            <div class=topright>
+                                              <div class="profile">
+                                                <div class="circle"
+                                                  :style="`background-image: url(${troca.userWants.user.picture})`">
+                                                </div>
+                                                <span class="name">{{ troca.userWants.user.name }}</span>
+                                              </div>
                                             </div>
                                           </div>
-                                          <div class=topright>
-                                            <div class="profile">
-                                              <div class="circle"
-                                                :style="`background-image: url(${troca.userWants.user.picture})`"></div>
-                                              <span class="name">{{ troca.userWants.user.name }}</span>
+                                          <div class="bottom">
+                                            <div class="left">
+                                              <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
+                                              <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
                                             </div>
-                                          </div>
-                                        </div>
-                                        <div class="bottom">
-                                          <div class="left">
-                                            <div class="tamanho">{{ troca.userHas.SizeoftheShoe }}</div>
-                                            <div class="marca">{{ troca.userHas.SelectedSneaker }}</div>
-                                          </div>
-                                          <div class="right">
-                                            <div>{{ troca.userWants.SizeoftheShoe }}</div>
-                                            <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                            <div class="right">
+                                              <div>{{ troca.userWants.SizeoftheShoe }}</div>
+                                              <div>{{ troca.userWants.SelectedSneaker }}</div>
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
