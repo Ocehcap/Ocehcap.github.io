@@ -11,12 +11,12 @@ new Vue({
         aplicarFiltros() {
             let trocasPessoaFiltro = this.trocasPessoa;
             // Filtrar as trocas da pessoa atual
-
+            console(trocasPessoaFiltro);
             if (this.termoPesquisa !== '') {
                 const termoBusca = this.termoPesquisa.toLowerCase();
                 trocasPessoaFiltro = trocasPessoaFiltro.filter(troca => troca.id.includes(termoBusca));
             }
-
+            console(trocasPessoaFiltro);
             this.trocasPessoaFiltro = trocasPessoaFiltro;
         },
         AcceptTrade(index) {
@@ -63,6 +63,7 @@ new Vue({
                 this.trocasPessoa = this.trocasPessoa.filter(troca => troca.userHas.user.id === idPessoa || troca.userWants.user.id === idPessoa);
                 this.trocasPessoa = this.trocasPessoa.filter(troca => troca.accept === false);
             }
+            console(trocasPessoa);
         }
     },
     created() {
