@@ -1,0 +1,208 @@
+/* ---------- NAVBAR ---------- */
+
+/* Estilo geral da navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent !important; /* Torna transparente */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Estilo do logo */
+.navbar .navbar-brand {
+    position: absolute; /* Remove o impacto no alinhamento */
+}
+.navbar .logo {
+    height: 50px; /* Ajusta o tamanho do logo */
+}
+
+/* Links da navbar */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre links */
+}
+.navbar, .navbar .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+/* ---------- OFFCANVAS ---------- */
+
+/* Reduz o tamanho do offcanvas em telas pequenas */
+.offcanvas {
+    max-width: 75%; /* Ocupa apenas 75% da largura da tela */
+}
+@media (max-width: 576px) {
+    .offcanvas {
+        max-width: 70%; /* Ajusta para telas muito pequenas */
+    }
+}
+
+/* ---------- HERO SECTION ---------- */
+
+.hero-section {
+    position: relative;
+    background: url('images/1.jpeg') no-repeat center center/cover; /* Imagem de fundo */
+    height: 80vh; /* Altura da seção */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Escurece a imagem */
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2; /* Sobrepõe o escurecimento */
+}
+.hero-title {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+/* ---------- TIPOGRAFIA GERAL ---------- */
+
+body {
+    font-family: 'Jost', sans-serif; /* Fonte padrão */
+}
+footer {
+    font-family: inherit; /* Mantém a herança */
+}
+
+/* ---------- BOTÕES CUSTOMIZADOS ---------- */
+
+.btn-custom {
+    background-color: #00EAFF;
+    color: black;
+    border: 2px solid white;
+    font-weight: 700;
+}
+.btn-custom:hover {
+    background-color: #00D0E5;
+    border-color: white;
+    color: black;
+}
+
+.btn-custom1 {
+    background-color: #00EAFF;
+    color: black;
+    border: 2px solid black;
+    font-weight: 700;
+}
+.btn-custom1:hover {
+    background-color: #00D0E5;
+    border-color: black;
+    color: black;
+}
+
+.btn-custom2 {
+    font-weight: 700;
+}
+
+/* ---------- ICONES ---------- */
+
+.icon-with-text i {
+    margin-bottom: 15px;
+}
+
+
+.bg-banner {
+    background-image: url('images/3.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    opacity: 1;
+}
+
+.bg-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Escurece a imagem */
+    z-index: 1;
+}
+
+/* Ajuste da imagem */
+.image-volume-wrapper {
+    position: relative;
+    display: inline-block;
+    perspective: 1000px; /* Define profundidade para o efeito 3D */
+}
+
+.image-with-volume {
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 
+                0 5px 15px rgba(0, 0, 0, 0.2); /* Sombras realistas */
+    transform: none; /* Remove inclinação */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-with-volume:hover {
+    transform: scale(1.05); /* Apenas amplia levemente no hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 8px 20px rgba(0, 0, 0, 0.3); /* Intensifica as sombras no hover */
+}
+
+/* Ajuste do texto */
+.text-container {
+    margin-left: auto; /* Empurra a div para a margem direita */
+    max-width: 550px; /* Limita a largura para manter layout organizado */
+    padding-right: 15px; /* Espaço interno da margem direita */
+}
+
+.text-container h2,
+.text-container p,
+.text-container h5 {
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+
+/* Envolve o vídeo com uma classe para aplicar o efeito */
+.video-wrapper {
+    position: relative;
+    display: inline-block;
+    perspective: 1000px; /* Adiciona profundidade */
+}
+
+/* Estilo do vídeo */
+.video-with-volume {
+    width: 100%;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 
+                0 5px 15px rgba(0, 0, 0, 0.2); /* Sombras para criar volume */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no vídeo */
+.video-with-volume:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 8px 20px rgba(0, 0, 0, 0.3); /* Intensifica as sombras */
+}
+
+
+
+
+
+
