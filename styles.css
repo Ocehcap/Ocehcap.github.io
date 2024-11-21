@@ -201,6 +201,18 @@ footer {
                 0 8px 20px rgba(0, 0, 0, 0.3); /* Intensifica as sombras */
 }
 
+/* Espaçamento adicional entre os itens do carousel no celular */
+@media (max-width: 767px) {
+    .carousel-item {
+        padding: 0px 15px; /* Adiciona padding interno para evitar colagem */
+    }
+
+    .carousel-item .col-md-4 {
+        margin-bottom: 20px; /* Espaçamento entre as reviews dentro do mesmo slide */
+    }
+}
+
+
 
 
 
