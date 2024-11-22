@@ -38,7 +38,7 @@
 .offcanvas {
     max-width: 75%; /* Ocupa apenas 75% da largura da tela */
 }
-@media (max-width: 576px) {
+@media (max-width: 576.98px) {
     .offcanvas {
         max-width: 70%; /* Ajusta para telas muito pequenas */
     }
@@ -202,7 +202,7 @@ footer {
 }
 
 /* Espaçamento adicional entre os itens do carousel no celular */
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
     .carousel-item {
         padding: 0px 15px; /* Adiciona padding interno para evitar colagem */
     }

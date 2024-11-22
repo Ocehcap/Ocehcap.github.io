@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebufest</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="hero-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="images/logo.png" alt="Logo" class="logo">
+                </a>
+    
+                <!-- Botão para abrir o Offcanvas (lado direito) -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+    
+                <!-- Links de navegação (telas grandes) -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto"> <!-- Centraliza os links -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Equipment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Event Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Offcanvas Navbar (para telas pequenas) -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Event Schedule</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">                           
+            <div class="hero-content text-center text-white">
+                <h1 class="hero-title px-3">Equipment</h1>
+                <p class="lead px-3">Our state-of-the-art equipment is designed to produce refreshing, safe and fun foam. With high-quality machines and non-toxic fluids, we offer an incredible experience for events of all kinds!</p>
+            </div>
+        </div> 
+    </header>
+
+    <section class="pt-5 pb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Coluna do texto -->
+                <div class="col-md-6 order-2 order-md-1">
+                    <h2 class="mb-4 px-3" style="max-width: 580px; font-weight: bold;">Foam Cannon</h2>
+                    <p class="lead px-3" style="max-width: 580px;">Transform the night with an LED light show and refreshing foam! A foam cannon that lights up your event and creates a unique atmosphere!</p>
+                    <!-- Botões alinhados à esquerda para computadores -->
+                    <div class="mt-4 d-none d-lg-block px-3">
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2">Read More</a>
+                        <a href="#" class="btn btn-custom1 btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+        
+                <!-- Coluna da imagem -->
+                <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
+                    <div class="video-wrapper">
+                        <img src="images/4.jpg" alt="Equipment" class="img-fluid rounded image-with-volume">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Botões responsivos para tablets e telemóveis -->
+            <div class="row mt-2">
+                <div class="col-12 d-md-block d-lg-none mb-4">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg">Read More</a>
+                        <a href="#" class="btn btn-custom1 btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-4 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Imagem à esquerda com sombras volumosas -->
+                <div class="col-md-6 text-center position-relative mb-4 mb-md-0">
+                    <div class="image-volume-wrapper">
+                        <img src="images/5.jpeg" alt="Equipment" class="img-fluid rounded image-with-volume">
+                    </div>
+                </div>
+    
+                <!-- Texto à direita -->
+                <div class="col-md-6 order-2 order-md-1 text-container">
+                    <h2 class="mb-4 px-3" style="max-width: 580px; font-weight: bold;">Cascade Effect Machine</h2>
+                    <p class="lead px-3" style="max-width: 580px;">Impress your guests with an incomparable foam waterfall effect! More foam, more freshness, more fun!</p>
+                    <!-- Botões centralizados para computador -->
+                    <div class="mt-4 d-none d-lg-block px-3">
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2">Read More</a>
+                        <a href="#" class="btn btn-custom1 btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <!-- Botões responsivos para tablets e telemóveis -->
+            <div class="row mt-4">
+                <div class="col-12 d-md-block d-lg-none mb-4">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg">Read More</a>
+                        <a href="#" class="btn btn-custom1 btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pt-5 pb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Coluna do texto -->
+                <div class="col-md-6 order-2 order-md-1">
+                    <h2 class="mb-4 px-3" style="max-width: 580px; font-weight: bold;">Foam products</h2>
+                    <p class="lead px-3" style="max-width: 580px;">Biodegradable, certified and safe foam - worry-free fun!</p>
+                    <!-- Botões alinhados à esquerda para computadores -->
+                    <div class="mt-4 d-none d-lg-block px-3">
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2">Read More</a>
+                        <a href="#" class="btn btn-custom1 btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+        
+                <!-- Coluna da imagem -->
+                <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
+                    <div class="video-wrapper">
+                        <img src="images/6.jpg" alt="Equipment" class="img-fluid rounded image-with-volume">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Botões responsivos para tablets e telemóveis -->
+            <div class="row mt-2">
+                <div class="col-12 d-md-block d-lg-none mb-4">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg">Read More</a>
+                        <a href="#" class="btn btn-custom1 btn-lg">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Copyright © Your Website 2023</p>
+        <p>
+            <a href="#" class="text-white text-decoration-none me-3">Privacy</a>
+            <a href="#" class="text-white text-decoration-none me-3">Terms</a>
+            <a href="#" class="text-white text-decoration-none">Contact</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link para o arquivo JS -->
+    <script src="carousel.js"></script>
+
+</body>
+</html>
