@@ -212,6 +212,56 @@ footer {
     }
 }
 
+.img-crop {
+    object-fit: cover;
+    object-position: center;
+    width: 100vw; /* Usa a largura total da tela */
+    max-height: 350px; /* Altura fixa para telas maiores */
+}
+
+/* Modal Header Styling */
+.modal-header {
+    background-color: #000; /* Preto puro */
+}
+.modal-header h2 {
+    font-size: 1.75rem;
+}
+.modal-header {
+    font-family: 'Jost', sans-serif;
+}
+
+
+/* Ícones e texto dentro do modal */
+
+.modal-body {
+    font-family: 'Jost', sans-serif;
+}
+
+.modal-body h4 {
+    color: #000; /* Preto */
+    font-weight: bold;
+    margin-top: 10px;
+}
+.modal-body p {
+    color: #333; /* Cinza escuro */
+    font-size: 1rem;
+}
+
+/* Espaçamento maior para PC */
+.modal-body .d-flex {
+    gap: 40px; /* Espaçamento horizontal */
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .modal-body .d-flex {
+        flex-direction: column;
+        gap: 20px; /* Espaçamento vertical menor para dispositivos móveis */
+    }
+}
+
+
+
 
 
 
