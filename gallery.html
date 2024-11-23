@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebufest</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="hero-section" style="background: url('images/7.jpg') no-repeat center center/cover;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="images/logo.png" alt="Logo" class="logo">
+                </a>
+    
+                <!-- Botão para abrir o Offcanvas (lado direito) -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+    
+                <!-- Links de navegação (telas grandes) -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto"> <!-- Centraliza os links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="equipment.html">Equipment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Quotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Event Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Offcanvas Navbar (para telas pequenas) -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="equipment.html">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Event Schedule</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">                           
+            <div class="hero-content text-center text-white">
+                <h1 class="hero-titleSub px-3">Gallery</h1>
+                <p class="lead px-3 hero-subtitle">Discover the unforgettable moments we've created! Dive into our gallery to see the energy, excitement, and joy that our foam parties bring to life at every event. From vibrant summer festivals to private celebrations, our foam-filled fun knows no limits!</p>
+            </div>
+        </div> 
+    </header>
+
+        <!-- Grade de Imagens com Classe Específica -->
+        <div class="container py-5">
+            <div class="row g-4">
+                <!-- Cada imagem com classes responsivas -->
+                <div class="col-12 col-6 col-md-4">
+                    <div class="image-volume-wrapper image-total">
+                        <img src="images/1.jpeg" class="img-fluid gallery-image image-with-volume" alt="Imagem 1">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="image-volume-wrapper image-total">
+                        <img src="images/2.jpg" class="img-fluid gallery-image image-with-volume" alt="Imagem 2">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="image-volume-wrapper image-total">
+                        <img src="images/3.png" class="img-fluid gallery-image image-with-volume" alt="Imagem 3">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="image-volume-wrapper image-total">
+                        <img src="images/4.jpg" class="img-fluid gallery-image image-with-volume" alt="Imagem 4">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="image-volume-wrapper image-total">
+                        <img src="images/5.jpeg" class="img-fluid gallery-image image-with-volume" alt="Imagem 5">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="image-volume-wrapper image-total">
+                        <img src="images/6.jpg" class="img-fluid gallery-image image-with-volume" alt="Imagem 6">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  
+  
+  
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Copyright © Your Website 2023</p>
+        <p>
+            <a href="#" class="text-white text-decoration-none me-3">Privacy</a>
+            <a href="#" class="text-white text-decoration-none me-3">Terms</a>
+            <a href="#" class="text-white text-decoration-none">Contact</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>   
