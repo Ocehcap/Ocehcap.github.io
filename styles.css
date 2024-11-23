@@ -48,7 +48,6 @@
 
 .hero-section {
     position: relative;
-    background: url('images/1.jpeg') no-repeat center center/cover; /* Imagem de fundo */
     height: 80vh; /* Altura da seção */
     display: flex;
     align-items: center;
@@ -253,13 +252,45 @@ footer {
 }
 
 /* Responsividade para mobile */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     .modal-body .d-flex {
         flex-direction: column;
         gap: 20px; /* Espaçamento vertical menor para dispositivos móveis */
     }
 }
 
+.hero-titleSub {
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.hero-subtitle{
+    font-size: 26px;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 767.98px) {
+    .hero-titleSub {
+        font-weight: 700;
+        font-size: 50px;
+    }
+    .hero-subtitle{
+        font-size: 20px;
+    }
+    
+}
+
+/* Responsividade para mobile */
+@media (min-width: 768px) and (max-width: 1024.98px) {
+    .hero-titleSub {
+        font-weight: 700;
+        font-size: 60px;
+    }
+    .hero-subtitle{
+        font-size: 23px;
+    }
+    
+}
 
 
 
