@@ -294,6 +294,7 @@ footer {
 
 .image-total {
     position: relative;
+    display: none;
     width: 100%;
     height: 300px; /* Altura fixa do contêiner */
 }
@@ -306,6 +307,21 @@ footer {
     border-radius: 15px; /* Bordas arredondadas */
     display: block; /* Evita espaços extras abaixo das imagens */
 }
+
+
+ /* Bordas pretas para todos os campos de entrada */
+.form-control, .form-select, .form-check-input, textarea {
+    border: 1px solid black;
+}
+
+/* Bordas pretas para os rótulos e botões de opção */
+.form-check-label, .form-label {
+    color: black;
+}
+
+
+
+
 
 
 
