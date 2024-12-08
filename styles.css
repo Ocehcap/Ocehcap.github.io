@@ -202,11 +202,11 @@ footer {
 
 /* Espaçamento adicional entre os itens do carousel no celular */
 @media (max-width: 767.98px) {
-    .carousel-item {
+    .pad {
         padding: 0px 15px; /* Adiciona padding interno para evitar colagem */
     }
 
-    .carousel-item .col-md-4 {
+    .pad .col-md-4 {
         margin-bottom: 20px; /* Espaçamento entre as reviews dentro do mesmo slide */
     }
 }
@@ -318,6 +318,44 @@ footer {
     color: black;
 }
 
+.carousel-image {
+    height: 80vh; /* Altura reduzida para 1/3 da viewport */
+    object-fit: cover; /* Garante que a imagem seja ajustada sem distorção */
+    filter: brightness(30%); /* Reduz o brilho para 50% */
+}
+
+
+/* Estilo dos botões quando abertos */
+.accordion-button:not(.collapsed) {
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+}
+
+/* Remove a borda azul ao abrir */
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Estilo dos itens */
+.accordion-item {
+    border: 1px solid #000; /* Borda preta */
+    border-radius: 6px; /* Bordas arredondadas */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 
+                0 3px 10px rgba(0, 0, 0, 0.15); /* Sombras suaves */
+}
+
+/* Efeito ao passar o mouse no vídeo */
+.accordion-item:hover {
+    transform: scale(1.02); /* Aumenta ligeiramente */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
+                0 8px 20px rgba(0, 0, 0, 0.25); /* Intensifica as sombras */
+}
+
+/* Garantir bordas */
+.accordion-item:not(:first-child) {
+    border-top: 1px solid #000; /* Adiciona borda superior nas perguntas subsequentes */
+}
 
 
 
