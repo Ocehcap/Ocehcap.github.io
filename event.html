@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebufest</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <link href="./css_table/dataTables.bootstrap5.css" rel="stylesheet">
+
+
+
+    <script src="./js_table/jquery-3.7.1.js"></script>
+    <script src="./js_table/bootstrap.bundle.min.js"></script>
+    <script src="./js_table/dataTables.js"></script>
+
+    <script src="./js_table/dataTables.bootstrap5.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="hero-section" style="background: url('images/7.jpg') no-repeat center center/cover;">
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="home.html">
+                    <img src="images/logo.png" alt="Logo" class="logo">
+                </a>
+
+                <!-- Botão para abrir o Offcanvas (lado direito) -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <!-- Links de navegação (telas grandes) -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto"> <!-- Centraliza os links -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="equipment.html">Equipment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quotes.html">Quotes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Event Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Offcanvas Navbar (para telas pequenas) -->
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="equipment.html">Equipment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quotes.html">Quotes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Event Schedule</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content text-center text-white">
+                <h1 class="hero-titleSub px-3">Equipment</h1>
+                <p class="lead px-3 hero-subtitle">Our state-of-the-art equipment is designed to produce refreshing,
+                    safe and fun foam. With high-quality machines and non-toxic fluids, we offer an incredible
+                    experience for events of all kinds!</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="table-responsive">
+                <table id="example" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Number of Guests</th>
+                            <th>Special Highlights</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Events from 2024 -->
+                        <tr>
+                            <td>Rock in Rio Lisboa</td>
+                            <td>Lisboa</td>
+                            <td>2024-06-23</td>
+                            <td>85,000</td>
+                            <td>Foam cannon show between headliners</td>
+                        </tr>
+                        <tr>
+                            <td>Albufeira Summer Foam Party</td>
+                            <td>Albufeira</td>
+                            <td>2024-07-15</td>
+                            <td>3,200</td>
+                            <td>Glow-in-the-dark foam</td>
+                        </tr>
+                        <tr>
+                            <td>Sunset Foam Festival</td>
+                            <td>Faro</td>
+                            <td>2024-08-10</td>
+                            <td>1,500</td>
+                            <td>Family-friendly foam dome</td>
+                        </tr>
+                        <tr>
+                            <td>Festas de São João</td>
+                            <td>Porto</td>
+                            <td>2024-06-24</td>
+                            <td>20,000</td>
+                            <td>Foam cannon celebration finale</td>
+                        </tr>
+                        <tr>
+                            <td>Cascais Foam Night</td>
+                            <td>Cascais</td>
+                            <td>2024-09-05</td>
+                            <td>1,800</td>
+                            <td>Interactive foam activities</td>
+                        </tr>
+                        <tr>
+                            <td>Vilamoura Yacht Party</td>
+                            <td>Vilamoura</td>
+                            <td>2024-08-20</td>
+                            <td>200</td>
+                            <td>Exclusive foam deck</td>
+                        </tr>
+                        <tr>
+                            <td>Seixal Foam Fest</td>
+                            <td>Seixal</td>
+                            <td>2024-05-14</td>
+                            <td>2,300</td>
+                            <td>Eco-friendly foam</td>
+                        </tr>
+                        <tr>
+                            <td>Estoril Beach Foam Event</td>
+                            <td>Estoril</td>
+                            <td>2024-06-10</td>
+                            <td>3,000</td>
+                            <td>Foam beach games</td>
+                        </tr>
+                        <tr>
+                            <td>Comporta Sunset Foam Bash</td>
+                            <td>Comporta</td>
+                            <td>2024-04-28</td>
+                            <td>1,200</td>
+                            <td>Foam-filled sunset vibes</td>
+                        </tr>
+                        <tr>
+                            <td>Porto Foam Carnival</td>
+                            <td>Porto</td>
+                            <td>2024-07-22</td>
+                            <td>10,000</td>
+                            <td>Live music with foam</td>
+                        </tr>
+                        <!-- Events from 2023 -->
+                        <tr>
+                            <td>Festival do Sudoeste</td>
+                            <td>Zambujeira do Mar</td>
+                            <td>2023-08-03</td>
+                            <td>50,000</td>
+                            <td>Foam cannon stage effects</td>
+                        </tr>
+                        <tr>
+                            <td>Lisboa Foam Night</td>
+                            <td>Lisboa</td>
+                            <td>2023-07-12</td>
+                            <td>5,000</td>
+                            <td>Foam laser show</td>
+                        </tr>
+                        <tr>
+                            <td>Portimão Foam Fest</td>
+                            <td>Portimão</td>
+                            <td>2023-08-20</td>
+                            <td>2,500</td>
+                            <td>Beachside foam party</td>
+                        </tr>
+                        <tr>
+                            <td>Sintra Kids Foam Day</td>
+                            <td>Sintra</td>
+                            <td>2023-06-15</td>
+                            <td>1,000</td>
+                            <td>Foam activities for children</td>
+                        </tr>
+                        <tr>
+                            <td>Figueira da Foz Foam Bash</td>
+                            <td>Figueira da Foz</td>
+                            <td>2023-09-01</td>
+                            <td>3,000</td>
+                            <td>Foam beach festival</td>
+                        </tr>
+                        <tr>
+                            <td>Aveiro Glow Foam Party</td>
+                            <td>Aveiro</td>
+                            <td>2023-05-20</td>
+                            <td>2,000</td>
+                            <td>Glow foam and music</td>
+                        </tr>
+                        <tr>
+                            <td>Coimbra Summer Foam</td>
+                            <td>Coimbra</td>
+                            <td>2023-04-30</td>
+                            <td>1,500</td>
+                            <td>DJ-led foam dance</td>
+                        </tr>
+                        <tr>
+                            <td>Guimarães Foam Event</td>
+                            <td>Guimarães</td>
+                            <td>2023-06-30</td>
+                            <td>2,200</td>
+                            <td>Foam carnival parade</td>
+                        </tr>
+                        <tr>
+                            <td>Évora Foam Night</td>
+                            <td>Évora</td>
+                            <td>2023-07-25</td>
+                            <td>1,000</td>
+                            <td>Foam chill-out lounge</td>
+                        </tr>
+                        <tr>
+                            <td>Funchal Foam Festival</td>
+                            <td>Funchal, Madeira</td>
+                            <td>2023-08-28</td>
+                            <td>4,000</td>
+                            <td>Foam on the beach</td>
+                        </tr>
+                        <!-- Events from 2022 -->
+                        <tr>
+                            <td>Super Bock Foam Party</td>
+                            <td>Lisboa</td>
+                            <td>2022-07-10</td>
+                            <td>15,000</td>
+                            <td>Foam and live DJ show</td>
+                        </tr>
+                        <tr>
+                            <td>Porto Summer Foam</td>
+                            <td>Porto</td>
+                            <td>2022-08-05</td>
+                            <td>3,000</td>
+                            <td>Foam cannon and lighting effects</td>
+                        </tr>
+                        <tr>
+                            <td>Aveiro Foam Night</td>
+                            <td>Aveiro</td>
+                            <td>2022-06-15</td>
+                            <td>1,500</td>
+                            <td>Family-friendly foam</td>
+                        </tr>
+                        <tr>
+                            <td>Comporta Sunset Bash</td>
+                            <td>Comporta</td>
+                            <td>2022-08-20</td>
+                            <td>2,200</td>
+                            <td>Eco-friendly foam dome</td>
+                        </tr>
+                        <tr>
+                            <td>Guarda Summer Foam Party</td>
+                            <td>Guarda</td>
+                            <td>2022-05-14</td>
+                            <td>800</td>
+                            <td>Kids' foam games</td>
+                        </tr>
+                        <tr>
+                            <td>Sintra Foam and Music</td>
+                            <td>Sintra</td>
+                            <td>2022-04-28</td>
+                            <td>2,000</td>
+                            <td>Foam DJ night</td>
+                        </tr>
+                        <tr>
+                            <td>Viseu Foam Party</td>
+                            <td>Viseu</td>
+                            <td>2022-06-30</td>
+                            <td>1,200</td>
+                            <td>Foam lights and dance</td>
+                        </tr>
+                        <tr>
+                            <td>Faro Foam Festival</td>
+                            <td>Faro</td>
+                            <td>2022-08-10</td>
+                            <td>4,000</td>
+                            <td>Interactive foam games</td>
+                        </tr>
+                        <tr>
+                            <td>Porto Foam Bash</td>
+                            <td>Porto</td>
+                            <td>2022-07-25</td>
+                            <td>2,500</td>
+                            <td>Glow foam experience</td>
+                        </tr>
+                        <tr>
+                            <td>Coimbra Foam Carnival</td>
+                            <td>Coimbra</td>
+                            <td>2022-09-01</td>
+                            <td>3,000</td>
+                            <td>Foam finale show</td>
+                        </tr><!-- Events from 2021 -->
+                        <tr>
+                            <td>Oeiras Foam Party</td>
+                            <td>Oeiras</td>
+                            <td>2021-07-08</td>
+                            <td>3,000</td>
+                            <td>Foam beach experience</td>
+                        </tr>
+                        <tr>
+                            <td>Rock in Rio Lisboa</td>
+                            <td>Lisboa</td>
+                            <td>2021-06-19</td>
+                            <td>80,000</td>
+                            <td>Foam and music performances</td>
+                        </tr>
+                        <tr>
+                            <td>Setúbal Foam Night</td>
+                            <td>Setúbal</td>
+                            <td>2021-08-25</td>
+                            <td>2,500</td>
+                            <td>Glow foam effects</td>
+                        </tr>
+                        <tr>
+                            <td>Sintra Foam Carnival</td>
+                            <td>Sintra</td>
+                            <td>2021-06-15</td>
+                            <td>1,800</td>
+                            <td>Interactive foam zone</td>
+                        </tr>
+                        <tr>
+                            <td>Albufeira Sunset Foam Party</td>
+                            <td>Albufeira</td>
+                            <td>2021-07-22</td>
+                            <td>2,800</td>
+                            <td>Sunset foam fun</td>
+                        </tr>
+                        <tr>
+                            <td>Viana do Castelo Foam Fest</td>
+                            <td>Viana do Castelo</td>
+                            <td>2021-08-10</td>
+                            <td>1,500</td>
+                            <td>Foam on the beach</td>
+                        </tr>
+                        <tr>
+                            <td>Cascais Foam Party</td>
+                            <td>Cascais</td>
+                            <td>2021-07-30</td>
+                            <td>3,200</td>
+                            <td>Live DJ and foam effects</td>
+                        </tr>
+                        <tr>
+                            <td>Lisbon Foam Carnival</td>
+                            <td>Lisboa</td>
+                            <td>2021-06-25</td>
+                            <td>4,000</td>
+                            <td>Foam and laser show</td>
+                        </tr>
+                        <tr>
+                            <td>Portimão Foam Bash</td>
+                            <td>Portimão</td>
+                            <td>2021-08-05</td>
+                            <td>2,000</td>
+                            <td>Glow-in-the-dark foam party</td>
+                        </tr>
+                        <tr>
+                            <td>Faro Foam Fiesta</td>
+                            <td>Faro</td>
+                            <td>2021-07-18</td>
+                            <td>3,500</td>
+                            <td>Foam-covered festival</td>
+                        </tr>
+                        <!-- Events from 2020 -->
+                        <tr>
+                            <td>Festa da Senhora da Hora</td>
+                            <td>Senhora da Hora</td>
+                            <td>2020-08-07</td>
+                            <td>1,000</td>
+                            <td>Foam party with local music</td>
+                        </tr>
+                        <tr>
+                            <td>Lisbon Foam Experience</td>
+                            <td>Lisboa</td>
+                            <td>2020-07-20</td>
+                            <td>5,000</td>
+                            <td>Interactive foam festival</td>
+                        </tr>
+                        <tr>
+                            <td>Foam Party at Praia da Rocha</td>
+                            <td>Praia da Rocha</td>
+                            <td>2020-08-10</td>
+                            <td>2,800</td>
+                            <td>DJ-led foam and beach games</td>
+                        </tr>
+                        <tr>
+                            <td>Porto Foam Extravaganza</td>
+                            <td>Porto</td>
+                            <td>2020-06-15</td>
+                            <td>3,500</td>
+                            <td>Live performance with foam</td>
+                        </tr>
+                        <tr>
+                            <td>Cascais Summer Foam Party</td>
+                            <td>Cascais</td>
+                            <td>2020-07-30</td>
+                            <td>2,000</td>
+                            <td>Glow foam and music</td>
+                        </tr>
+                        <tr>
+                            <td>Figueira da Foz Foam Bash</td>
+                            <td>Figueira da Foz</td>
+                            <td>2020-08-03</td>
+                            <td>1,200</td>
+                            <td>DJ-led foam beach party</td>
+                        </tr>
+                        <tr>
+                            <td>Comporta Foam Fiesta</td>
+                            <td>Comporta</td>
+                            <td>2020-06-30</td>
+                            <td>1,800</td>
+                            <td>Exclusive foam night</td>
+                        </tr>
+                        <tr>
+                            <td>Albufeira Foam Festival</td>
+                            <td>Albufeira</td>
+                            <td>2020-08-12</td>
+                            <td>2,500</td>
+                            <td>Sunset foam party</td>
+                        </tr>
+                        <tr>
+                            <td>Amarante Foam Show</td>
+                            <td>Amarante</td>
+                            <td>2020-06-10</td>
+                            <td>800</td>
+                            <td>Foam cannon and fireworks</td>
+                        </tr>
+                        <tr>
+                            <td>Vila do Conde Foam Party</td>
+                            <td>Vila do Conde</td>
+                            <td>2020-07-15</td>
+                            <td>1,000</td>
+                            <td>Foam-filled beach games</td>
+                        </tr>
+                        <tr>
+                            <td>Sintra Summer Foam</td>
+                            <td>Sintra</td>
+                            <td>2020-07-05</td>
+                            <td>1,500</td>
+                            <td>Foam activities for kids</td>
+                        </tr>
+                        <tr>
+                            <td>Lisbon Foam Extravaganza</td>
+                            <td>Lisboa</td>
+                            <td>2020-08-15</td>
+                            <td>3,200</td>
+                            <td>DJ performances with foam</td>
+                        </tr>
+                        <tr>
+                            <td>Funchal Foam Festival</td>
+                            <td>Funchal, Madeira</td>
+                            <td>2020-06-18</td>
+                            <td>2,000</td>
+                            <td>Foam beach party</td>
+                        </tr>
+                        <tr>
+                            <td>Azores Foam Party</td>
+                            <td>Ponta Delgada, Açores</td>
+                            <td>2020-07-22</td>
+                            <td>1,200</td>
+                            <td>Sunset foam experience</td>
+                        </tr>
+                        <tr>
+                            <td>Praia de Mira Foam Fest</td>
+                            <td>Praia de Mira</td>
+                            <td>2020-06-23</td>
+                            <td>1,800</td>
+                            <td>Interactive foam zone for families</td>
+                        </tr>
+                        <tr>
+                            <td>Viana do Castelo Foam Bash</td>
+                            <td>Viana do Castelo</td>
+                            <td>2020-08-25</td>
+                            <td>2,500</td>
+                            <td>DJ-led foam party</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>Copyright © Your Website 2023</p>
+        <p>
+            <a href="#" class="text-white text-decoration-none me-3">Privacy</a>
+            <a href="#" class="text-white text-decoration-none me-3">Terms</a>
+            <a href="#" class="text-white text-decoration-none">Contact</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
