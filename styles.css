@@ -435,3 +435,18 @@ textarea {
     color: #fff;
     /* Cor do separador ("/") */
 }
+
+.nav-tabs .nav-link {
+    color: black; /* Cor padrão para abas não ativas */
+    background-color: #f8f9fa; /* Cor de fundo para abas não ativas */
+    border: 1px solid #ddd; /* Borda leve para separação */
+    font-weight: bold;
+}
+.nav-tabs .nav-link:hover {
+    color: black; /* Cor quando o mouse passa por cima */
+    background-color: #e2e6ea; /* Leve destaque ao passar o mouse */
+}
+.nav-tabs .nav-link.active {
+    color: black; /* Cor da aba ativa */
+    background-color: #00D0E5; /* Fundo azul da aba ativa */
+}

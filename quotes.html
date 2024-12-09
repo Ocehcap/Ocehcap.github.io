@@ -114,6 +114,7 @@
         <h1 class="text-center mb-4">Fulfill the boxes below</h1>
         <form id="quoteForm" novalidate>
             <div class="row g-3">
+                <!-- Existing Fields -->
                 <!-- First Name -->
                 <div class="col-md-6">
                     <label for="firstName" class="form-label">First Name</label>
@@ -164,12 +165,68 @@
                     <input type="text" class="form-control" id="location" placeholder="Enter your location" required>
                     <div class="invalid-feedback">Please enter the event location.</div>
                 </div>
+
+                <!-- New Fields -->
+                <!-- Services Interested In -->
+                <div class="col-md-6" id="servicesGroup">
+                    <label class="form-label">Services Interested In</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="foamCannon" value="Foam Cannon" name="services">
+                            <label class="form-check-label" for="foamCannon">Foam Cannon</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cascadeMachine" value="Cascade Machine" name="services">
+                            <label class="form-check-label" for="cascadeMachine">Cascade Machine</label>
+                        </div>
+                    </div>
+                    <div class="invalid-feedback">
+                        Please select at least one service.
+                    </div>
+                </div>
+
+                <!-- Duration -->
+                <div class="col-md-6">
+                    <label class="form-label">Duration</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="duration" id="duration1" value="1h">
+                            <label class="form-check-label" for="duration1">1h</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="duration" id="duration1-30"
+                                value="1h 30min">
+                            <label class="form-check-label" for="duration1-30">1h 30min</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="duration" id="duration2" value="2h">
+                            <label class="form-check-label" for="duration2">2h</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="duration" id="other" value="Other" required>
+                            <label class="form-check-label" for="other">Other</label>
+                            <div class="invalid-feedback">Please select a duration for your event.</div>
+                        </div>
+                        <div id="customDurationGroup" class="d-none">
+                            <div class="input-group mt-2">
+                                <button type="button" id="decreaseDuration" class="btn btn-outline-secondary">-</button>
+                                <input type="text" class="form-control" id="otherDuration"
+                                    placeholder="Enter duration in hours" readonly>
+                                <button type="button" id="increaseDuration" class="btn btn-outline-secondary">+</button>
+                            </div>
+                        </div>
+                        <div class="invalid-feedback">Please specify a valid duration in hours (e.g., 1.5).</div>
+                    </div>
+                </div>
+
+
                 <!-- Additional Details -->
                 <div class="col-md-6">
                     <label for="additionalDetails" class="form-label">Additional Details</label>
                     <textarea class="form-control" id="additionalDetails" rows="5"
                         placeholder="Tell us more about your event, special requests, or questions."></textarea>
                 </div>
+
                 <!-- Submit Button -->
                 <div class="col-12 text-center mt-4 mb-5">
                     <button type="submit" class="btn btn-custom1 btn-lg">Request a Quote</button>
@@ -177,6 +234,7 @@
             </div>
         </form>
     </div>
+
 
 
 

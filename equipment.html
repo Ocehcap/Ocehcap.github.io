@@ -148,54 +148,75 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="foamCannonModal" tabindex="-1" aria-labelledby="foamCannonModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="foamCannonModal" tabindex="-1" aria-labelledby="foamCannonModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <!-- Header -->
                     <div class="modal-header bg-dark text-white">
                         <h2 class="modal-title fw-bold" id="foamCannonModalLabel">Foam Cannon</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div style="height: 2px; background-color: #00EAFF;"></div>
-
+        
                     <!-- Body -->
                     <div class="modal-body p-4">
-                        <div class="d-flex justify-content-around text-center gap-4">
-                            <!-- LED Lights -->
-                            <div>
-                                <i class="bi bi-lightbulb text-dark fs-1"></i>
-                                <h4 class="mt-2">LED Lights</h4>
-                                <p>Internal and external LEDs with multiple color combinations. Lighting programs
-                                    controllable via remote for full customization.</p>
+                        <!-- Tabs Navigation -->
+                        <ul class="nav nav-tabs" id="modalTabs" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active text-center" id="led-tab" data-bs-toggle="tab" data-bs-target="#led"
+                                    type="button" role="tab" aria-controls="led" aria-selected="true">
+                                    <i class="bi bi-lightbulb text-dark"></i>
+                                    <span class="d-none d-lg-inline"> LED Lights</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link text-center" id="foam-tab" data-bs-toggle="tab" data-bs-target="#foam"
+                                    type="button" role="tab" aria-controls="foam" aria-selected="false">
+                                    <i class="bi bi-droplet-half text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Foam Production</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link text-center" id="ideal-tab" data-bs-toggle="tab" data-bs-target="#ideal"
+                                    type="button" role="tab" aria-controls="ideal" aria-selected="false">
+                                    <i class="bi bi-calendar-event text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Ideal For</span>
+                                </button>
+                            </li>
+                        </ul>
+        
+                        <!-- Tabs Content -->
+                        <div class="tab-content mt-3" id="modalTabsContent">
+                            <div class="tab-pane fade show active" id="led" role="tabpanel" aria-labelledby="led-tab">
+                                <h4>LED Lights</h4>
+                                <p>Internal and external LEDs with multiple color combinations. Lighting programs controllable
+                                    via remote for full customization.</p>
                             </div>
-                            <!-- Foam Production -->
-                            <div>
-                                <i class="bi bi-droplet-half text-dark fs-1"></i>
-                                <h4 class="mt-2">Foam Production</h4>
-                                <p>Generates large amounts of foam in just a few minutes. Neutral, non-toxic foam with
-                                    balanced pH – safe for skin and eyes.</p>
+                            <div class="tab-pane fade" id="foam" role="tabpanel" aria-labelledby="foam-tab">
+                                <h4>Foam Production</h4>
+                                <p>Generates large amounts of foam in just a few minutes. Neutral, non-toxic foam with balanced pH –
+                                    safe for skin and eyes.</p>
                             </div>
-                            <!-- Ideal For -->
-                            <div>
-                                <i class="bi bi-calendar-event text-dark fs-1"></i>
-                                <h4 class="mt-2">Ideal For</h4>
-                                <p>Outdoor parties, nighttime events, and visually stunning settings. Perfect for
-                                    creating an energetic and immersive atmosphere.</p>
+                            <div class="tab-pane fade" id="ideal" role="tabpanel" aria-labelledby="ideal-tab">
+                                <h4>Ideal For</h4>
+                                <p>Outdoor parties, nighttime events, and visually stunning settings. Perfect for creating an
+                                    energetic and immersive atmosphere.</p>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Footer -->
                     <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2"
-                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-dismiss="modal">
+                            Close
+                        </button>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
+        
+
     </section>
 
 
@@ -249,25 +270,51 @@
 
                     <!-- Body -->
                     <div class="modal-body p-4">
-                        <div class="d-flex justify-content-around text-center gap-4">
-                            <!-- Foam Production -->
-                            <div>
-                                <i class="bi bi-droplet text-dark fs-1"></i>
-                                <h4 class="mt-2">Foam Production</h4>
+                        <!-- Tabs Navigation -->
+                        <ul class="nav nav-tabs" id="cascadeModalTabs" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active text-center" id="foamProduction-tab" data-bs-toggle="tab"
+                                    data-bs-target="#foamProduction" type="button" role="tab" aria-controls="foamProduction"
+                                    aria-selected="true">
+                                    <i class="bi bi-droplet text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Foam Production</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link text-center" id="technicalFeatures-tab" data-bs-toggle="tab"
+                                    data-bs-target="#technicalFeatures" type="button" role="tab"
+                                    aria-controls="technicalFeatures" aria-selected="false">
+                                    <i class="bi bi-gear text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Technical Features</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link text-center" id="applications-tab" data-bs-toggle="tab"
+                                    data-bs-target="#applications" type="button" role="tab" aria-controls="applications"
+                                    aria-selected="false">
+                                    <i class="bi bi-layers text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Applications</span>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tabs Content -->
+                        <div class="tab-content mt-3" id="cascadeModalTabsContent">
+                            <div class="tab-pane fade show active" id="foamProduction" role="tabpanel"
+                                aria-labelledby="foamProduction-tab">
+                                <h4>Foam Production</h4>
                                 <p>Quickly generates refreshing foam in large quantities. Soft foam formula, safe for
                                     skin and eyes.</p>
                             </div>
-                            <!-- Technical Features -->
-                            <div>
-                                <i class="bi bi-gear text-dark fs-1"></i>
-                                <h4 class="mt-2">Technical Features</h4>
+                            <div class="tab-pane fade" id="technicalFeatures" role="tabpanel"
+                                aria-labelledby="technicalFeatures-tab">
+                                <h4>Technical Features</h4>
                                 <p>Durable structure, ideal for heavy-duty use at events. Efficient and economical
                                     operation for liquid consumption.</p>
                             </div>
-                            <!-- Applications -->
-                            <div>
-                                <i class="bi bi-layers text-dark fs-1"></i>
-                                <h4 class="mt-2">Applications</h4>
+                            <div class="tab-pane fade" id="applications" role="tabpanel"
+                                aria-labelledby="applications-tab">
+                                <h4>Applications</h4>
                                 <p>Perfect for creating a cascading effect on stages and elevated areas. Designed to
                                     create impactful visual scenes for events.</p>
                             </div>
@@ -277,12 +324,16 @@
                     <!-- Footer -->
                     <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2"
-                            data-bs-dismiss="modal">Close</button>
+                            data-bs-dismiss="modal">
+                            Close
+                        </button>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </section>
 
 
@@ -323,54 +374,79 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="foamProductsModal" tabindex="-1" aria-labelledby="foamProductsModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="foamProductsModal" tabindex="-1" aria-labelledby="foamProductsModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <!-- Header -->
                     <div class="modal-header bg-dark text-white">
                         <h2 class="modal-title fw-bold" id="foamProductsModalLabel">Foam Products</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div style="height: 2px; background-color: #00EAFF;"></div>
-
+        
                     <!-- Body -->
                     <div class="modal-body p-4">
-                        <div class="d-flex justify-content-around text-center gap-4">
-                            <!-- Safe Formulation -->
-                            <div>
-                                <i class="bi bi-shield-check text-dark fs-1"></i>
-                                <h4 class="mt-2">Safe Formulation</h4>
-                                <p>Meets all European safety standards. Biodegradable and pH-neutral, ensuring safety
-                                    for skin and eyes.</p>
+                        <!-- Tabs Navigation -->
+                        <ul class="nav nav-tabs" id="foamProductsModalTabs" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active text-center" id="safeFormulation-tab" data-bs-toggle="tab"
+                                    data-bs-target="#safeFormulation" type="button" role="tab" aria-controls="safeFormulation"
+                                    aria-selected="true">
+                                    <i class="bi bi-shield-check text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Safe Formulation</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link text-center" id="certification-tab" data-bs-toggle="tab"
+                                    data-bs-target="#certification" type="button" role="tab" aria-controls="certification"
+                                    aria-selected="false">
+                                    <i class="bi bi-award text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Certification</span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link text-center" id="environmentalBenefits-tab" data-bs-toggle="tab"
+                                    data-bs-target="#environmentalBenefits" type="button" role="tab" aria-controls="environmentalBenefits"
+                                    aria-selected="false">
+                                    <i class="bi bi-tree text-dark"></i>
+                                    <span class="d-none d-lg-inline"> Environmental Benefits</span>
+                                </button>
+                            </li>
+                        </ul>
+        
+                        <!-- Tabs Content -->
+                        <div class="tab-content mt-3" id="foamProductsModalTabsContent">
+                            <div class="tab-pane fade show active" id="safeFormulation" role="tabpanel"
+                                aria-labelledby="safeFormulation-tab">
+                                <h4>Safe Formulation</h4>
+                                <p>Meets all European safety standards. Biodegradable and pH-neutral, ensuring safety for skin
+                                    and eyes.</p>
                             </div>
-                            <!-- Certification -->
-                            <div>
-                                <i class="bi bi-award text-dark fs-1"></i>
-                                <h4 class="mt-2">Certification</h4>
-                                <p>Safety certifications available upon request. Tested and approved for use with
-                                    children and adults.</p>
+                            <div class="tab-pane fade" id="certification" role="tabpanel" aria-labelledby="certification-tab">
+                                <h4>Certification</h4>
+                                <p>Safety certifications available upon request. Tested and approved for use with children and
+                                    adults.</p>
                             </div>
-                            <!-- Environmental Benefits -->
-                            <div>
-                                <i class="bi bi-tree text-dark fs-1"></i>
-                                <h4 class="mt-2">Environmental Benefits</h4>
+                            <div class="tab-pane fade" id="environmentalBenefits" role="tabpanel" aria-labelledby="environmentalBenefits-tab">
+                                <h4>Environmental Benefits</h4>
                                 <p>Eco-friendly composition with biodegradable ingredients. Sustainable and safe for the
                                     environment, minimizing impact.</p>
                             </div>
                         </div>
                     </div>
-
+        
                     <!-- Footer -->
                     <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2"
-                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-dismiss="modal">
+                            Close
+                        </button>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
+        
+
     </section>
 
     <!-- Footer -->
