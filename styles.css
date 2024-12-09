@@ -452,7 +452,7 @@ textarea {
 }
 
 /* Remove a borda padrão do modal */
-.modal-content {
+.styleModal {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
