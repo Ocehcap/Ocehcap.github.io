@@ -45,35 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.getElementById('quoteForm');
-        const foamCannonCheckbox = document.getElementById('foamCannon');
-        const cascadeMachineCheckbox = document.getElementById('cascadeMachine');
-        const servicesGroup = document.getElementById('servicesGroup');
-    
-        form.addEventListener('submit', (event) => {
-            // Verificar se pelo menos um checkbox está marcado
-            if (!foamCannonCheckbox.checked && !cascadeMachineCheckbox.checked) {
-                event.preventDefault();
-                event.stopPropagation();
-                servicesGroup.classList.add('was-validated');
-                servicesGroup.querySelector('.invalid-feedback').style.display = 'block';
-            } else {
-                servicesGroup.querySelector('.invalid-feedback').style.display = 'none';
-            }
-        });
-    
-        // Remover mensagem de erro ao marcar um checkbox
-        [foamCannonCheckbox, cascadeMachineCheckbox].forEach(checkbox => {
-            checkbox.addEventListener('change', () => {
-                if (foamCannonCheckbox.checked || cascadeMachineCheckbox.checked) {
-                    servicesGroup.querySelector('.invalid-feedback').style.display = 'none';
-                }
-            });
-        });
-    });
-    
     
 
     // Validação do formulário
