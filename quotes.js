@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('quoteForm');
     const dateInput = document.getElementById('date');
     const today = new Date().toISOString().split('T')[0]; // Obtém a data de hoje no formato YYYY-MM-DD
     dateInput.setAttribute('min', today);
+
     const otherRadio = document.getElementById('other');
     const customDurationGroup = document.getElementById('customDurationGroup');
     const otherDurationInput = document.getElementById('otherDuration');
@@ -66,15 +68,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
 
-    // Validação do formulário
-    const form = document.getElementById('quoteForm');
+    // Validação do formulário com SweetAlert2
     form.addEventListener('submit', (event) => {
-        if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
+        event.preventDefault(); // Previne o comportamento padrão
+
+        if (form.checkValidity()) {
+            // Formulário válido
+            Swal.fire({
+                icon: 'success',
+                title: 'Form submitted successfully!',
+                text: 'We will get back to you shortly.',
+                timer: 3000, // Duração em milissegundos
+                timerProgressBar: true,
+                showConfirmButton: false, // Remove o botão de "OK"
+            }).then(() => {
+                form.submit(); // Envia o formulário após fechar o pop-up
+            });
+        } else {
+            // Formulário inválido
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please fill in all required fields!',
+                showConfirmButton: true, // Mantém o botão para o usuário fechar
+            });
+            form.classList.add('was-validated');
         }
-        form.classList.add('was-validated');
     });
 });
