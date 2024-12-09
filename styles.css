@@ -450,3 +450,10 @@ textarea {
     color: black; /* Cor da aba ativa */
     background-color: #00D0E5; /* Fundo azul da aba ativa */
 }
+
+/* Remove a borda padrão do modal */
+.modal-content {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}

@@ -1,4 +1,3 @@
-// Dados simulados para imagens e vídeos
 const galleryData = [
     { type: 'image', src: 'images/1.jpeg', alt: 'Imagem 1' },
     { type: 'image', src: 'images/2.jpg', alt: 'Imagem 2' },
@@ -27,20 +26,20 @@ let visibleItems = 0; // Número de itens inicialmente visíveis
 // Função para criar e renderizar um item de galeria
 function createGalleryItem(item) {
     const col = document.createElement('div');
-    col.className = 'col-12 col-sm-6 col-md-4';
+    col.className = 'col-6 col-md-4'; // Responsivo: 2 colunas em telas pequenas, 3 em médias
 
     const wrapper = document.createElement('div');
-    wrapper.className = 'image-volume-wrapper image-total';
+    wrapper.className = 'ratio ratio-1x1'; // Proporção fixa de 1:1 (quadrado)
 
     if (item.type === 'image') {
         const img = document.createElement('img');
         img.src = item.src;
         img.alt = item.alt || 'Imagem da galeria';
-        img.className = 'img-fluid gallery-image image-with-volume';
+        img.className = 'img-fluid gallery-image';
         wrapper.appendChild(img);
     } else if (item.type === 'video') {
         const video = document.createElement('video');
-        video.className = 'img-fluid video-with-volume gallery-image';
+        video.className = 'gallery-image w-100 h-100';
         video.autoplay = true;
         video.loop = true;
         video.muted = true;
@@ -86,3 +85,15 @@ function initializeGallery() {
 // Adiciona eventos
 seeMoreBtn.addEventListener('click', loadMoreItems);
 initializeGallery();
+
+// Modal para exibir imagens ou vídeos ampliados
+const galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+const modalImage = document.getElementById('modalImage');
+
+galleryContainer.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target.tagName === 'IMG' || target.tagName === 'VIDEO') {
+        modalImage.src = target.src;
+        galleryModal.show();
+    }
+});
