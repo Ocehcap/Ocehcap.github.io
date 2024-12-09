@@ -2,7 +2,7 @@
 (function () {
     'use strict';
     const form = document.getElementById('quoteForm');
-    
+
     if (form) {
         form.addEventListener('submit', function (event) {
             if (!form.checkValidity()) {

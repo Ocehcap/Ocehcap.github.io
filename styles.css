@@ -5,29 +5,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent !important; /* Torna transparente */
+    background-color: transparent !important;
+    /* Torna transparente */
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 10;
-    transition: background-color 0.3s ease-in-out; /* Transição suave */
+    transition: background-color 0.3s ease-in-out;
+    /* Transição suave */
 }
 
 /* Estilo do logo */
 .navbar .navbar-brand {
-    position: absolute; /* Remove o impacto no alinhamento */
+    position: absolute;
+    /* Remove o impacto no alinhamento */
 }
+
 .navbar .logo {
-    height: 50px; /* Ajusta o tamanho do logo */
+    height: 50px;
+    /* Ajusta o tamanho do logo */
 }
 
 /* Links da navbar */
 .navbar-nav {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaçamento entre links */
+    gap: 20px;
+    /* Espaçamento entre links */
 }
-.navbar, .navbar .nav-link {
+
+.navbar,
+.navbar .nav-link {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
 }
@@ -36,11 +44,14 @@
 
 /* Reduz o tamanho do offcanvas em telas pequenas */
 .offcanvas {
-    max-width: 75%; /* Ocupa apenas 75% da largura da tela */
+    max-width: 75%;
+    /* Ocupa apenas 75% da largura da tela */
 }
+
 @media (max-width: 576.98px) {
     .offcanvas {
-        max-width: 70%; /* Ajusta para telas muito pequenas */
+        max-width: 70%;
+        /* Ajusta para telas muito pequenas */
     }
 }
 
@@ -48,11 +59,13 @@
 
 .hero-section {
     position: relative;
-    height: 80vh; /* Altura da seção */
+    height: 80vh;
+    /* Altura da seção */
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -60,13 +73,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Escurece a imagem */
+    background: rgba(0, 0, 0, 0.7);
+    /* Escurece a imagem */
     z-index: 1;
 }
+
 .hero-content {
     position: relative;
-    z-index: 2; /* Sobrepõe o escurecimento */
+    z-index: 2;
+    /* Sobrepõe o escurecimento */
 }
+
 .hero-title {
     font-weight: 700;
     font-size: 40px;
@@ -75,10 +92,13 @@
 /* ---------- TIPOGRAFIA GERAL ---------- */
 
 body {
-    font-family: 'Jost', sans-serif; /* Fonte padrão */
+    font-family: 'Jost', sans-serif;
+    /* Fonte padrão */
 }
+
 footer {
-    font-family: inherit; /* Mantém a herança */
+    font-family: inherit;
+    /* Mantém a herança */
 }
 
 /* ---------- BOTÕES CUSTOMIZADOS ---------- */
@@ -89,6 +109,7 @@ footer {
     border: 2px solid white;
     font-weight: 700;
 }
+
 .btn-custom:hover {
     background-color: #00D0E5;
     border-color: white;
@@ -101,6 +122,7 @@ footer {
     border: 2px solid black;
     font-weight: 700;
 }
+
 .btn-custom1:hover {
     background-color: #00D0E5;
     border-color: black;
@@ -138,7 +160,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Escurece a imagem */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Escurece a imagem */
     z-index: 1;
 }
 
@@ -146,34 +169,44 @@ footer {
 .image-volume-wrapper {
     position: relative;
     display: inline-block;
-    perspective: 1000px; /* Define profundidade para o efeito 3D */
+    perspective: 1000px;
+    /* Define profundidade para o efeito 3D */
 }
 
 .image-with-volume {
-    border-radius: 15px; /* Bordas arredondadas */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 
-                0 5px 15px rgba(0, 0, 0, 0.2); /* Sombras realistas */
-    transform: none; /* Remove inclinação */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Sombras realistas */
+    transform: none;
+    /* Remove inclinação */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-with-volume:hover {
-    transform: scale(1.05); /* Apenas amplia levemente no hover */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
-                0 8px 20px rgba(0, 0, 0, 0.3); /* Intensifica as sombras no hover */
+    transform: scale(1.05);
+    /* Apenas amplia levemente no hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+        0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Intensifica as sombras no hover */
 }
 
 /* Ajuste do texto */
 .text-container {
-    margin-left: auto; /* Empurra a div para a margem direita */
-    max-width: 550px; /* Limita a largura para manter layout organizado */
-    padding-right: 15px; /* Espaço interno da margem direita */
+    margin-left: auto;
+    /* Empurra a div para a margem direita */
+    max-width: 550px;
+    /* Limita a largura para manter layout organizado */
+    padding-right: 15px;
+    /* Espaço interno da margem direita */
 }
 
 .text-container h2,
 .text-container p,
 .text-container h5 {
-    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    text-align: left;
+    /* Garante que o texto fique alinhado à esquerda */
 }
 
 
@@ -181,50 +214,62 @@ footer {
 .video-wrapper {
     position: relative;
     display: inline-block;
-    perspective: 1000px; /* Adiciona profundidade */
+    perspective: 1000px;
+    /* Adiciona profundidade */
 }
 
 /* Estilo do vídeo */
 .video-with-volume {
     width: 100%;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 
-                0 5px 15px rgba(0, 0, 0, 0.2); /* Sombras para criar volume */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3),
+        0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Sombras para criar volume */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efeito ao passar o mouse no vídeo */
 .video-with-volume:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
-                0 8px 20px rgba(0, 0, 0, 0.3); /* Intensifica as sombras */
+    transform: scale(1.05);
+    /* Aumenta ligeiramente */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+        0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Intensifica as sombras */
 }
 
 /* Espaçamento adicional entre os itens do carousel no celular */
 @media (max-width: 767.98px) {
     .pad {
-        padding: 0px 15px; /* Adiciona padding interno para evitar colagem */
+        padding: 0px 15px;
+        /* Adiciona padding interno para evitar colagem */
     }
 
     .pad .col-md-4 {
-        margin-bottom: 20px; /* Espaçamento entre as reviews dentro do mesmo slide */
+        margin-bottom: 20px;
+        /* Espaçamento entre as reviews dentro do mesmo slide */
     }
 }
 
 .img-crop {
     object-fit: cover;
     object-position: center;
-    width: 100vw; /* Usa a largura total da tela */
-    max-height: 350px; /* Altura fixa para telas maiores */
+    width: 100vw;
+    /* Usa a largura total da tela */
+    max-height: 350px;
+    /* Altura fixa para telas maiores */
 }
 
 /* Modal Header Styling */
 .modal-header {
-    background-color: #000; /* Preto puro */
+    background-color: #000;
+    /* Preto puro */
 }
+
 .modal-header h2 {
     font-size: 1.75rem;
 }
+
 .modal-header {
     font-family: 'Jost', sans-serif;
 }
@@ -237,25 +282,30 @@ footer {
 }
 
 .modal-body h4 {
-    color: #000; /* Preto */
+    color: #000;
+    /* Preto */
     font-weight: bold;
     margin-top: 10px;
 }
+
 .modal-body p {
-    color: #333; /* Cinza escuro */
+    color: #333;
+    /* Cinza escuro */
     font-size: 1rem;
 }
 
 /* Espaçamento maior para PC */
 .modal-body .d-flex {
-    gap: 40px; /* Espaçamento horizontal */
+    gap: 40px;
+    /* Espaçamento horizontal */
 }
 
 /* Responsividade para mobile */
 @media (max-width: 767.98px) {
     .modal-body .d-flex {
         flex-direction: column;
-        gap: 20px; /* Espaçamento vertical menor para dispositivos móveis */
+        gap: 20px;
+        /* Espaçamento vertical menor para dispositivos móveis */
     }
 }
 
@@ -264,7 +314,7 @@ footer {
     font-size: 70px;
 }
 
-.hero-subtitle{
+.hero-subtitle {
     font-size: 26px;
 }
 
@@ -274,10 +324,11 @@ footer {
         font-weight: 700;
         font-size: 50px;
     }
-    .hero-subtitle{
+
+    .hero-subtitle {
         font-size: 20px;
     }
-    
+
 }
 
 /* Responsividade para mobile */
@@ -286,49 +337,66 @@ footer {
         font-weight: 700;
         font-size: 60px;
     }
-    .hero-subtitle{
+
+    .hero-subtitle {
         font-size: 23px;
     }
-    
+
 }
 
 .image-total {
     position: relative;
     width: 100%;
-    height: 300px; /* Altura fixa do contêiner */
+    height: 300px;
+    /* Altura fixa do contêiner */
 }
 
 .gallery-image {
-    width: 100%; /* A imagem ocupa toda a largura do contêiner */
-    height: 100%; /* A imagem ocupa toda a altura do contêiner */
-    object-fit: cover; /* Faz com que a imagem cubra todo o espaço, cortando excessos conforme necessário */
-    object-position: center; /* Centraliza a parte visível da imagem */
-    border-radius: 15px; /* Bordas arredondadas */
-    display: block; /* Evita espaços extras abaixo das imagens */
+    width: 100%;
+    /* A imagem ocupa toda a largura do contêiner */
+    height: 100%;
+    /* A imagem ocupa toda a altura do contêiner */
+    object-fit: cover;
+    /* Faz com que a imagem cubra todo o espaço, cortando excessos conforme necessário */
+    object-position: center;
+    /* Centraliza a parte visível da imagem */
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    display: block;
+    /* Evita espaços extras abaixo das imagens */
 }
 
 
- /* Bordas pretas para todos os campos de entrada */
-.form-control, .form-select, .form-check-input, textarea {
+/* Bordas pretas para todos os campos de entrada */
+.form-control,
+.form-select,
+.form-check-input,
+textarea {
     border: 1px solid black;
 }
 
 /* Bordas pretas para os rótulos e botões de opção */
-.form-check-label, .form-label {
+.form-check-label,
+.form-label {
     color: black;
 }
 
 .carousel-image {
-    height: 80vh; /* Altura reduzida para 1/3 da viewport */
-    object-fit: cover; /* Garante que a imagem seja ajustada sem distorção */
-    filter: brightness(30%); /* Reduz o brilho para 50% */
+    height: 80vh;
+    /* Altura reduzida para 1/3 da viewport */
+    object-fit: cover;
+    /* Garante que a imagem seja ajustada sem distorção */
+    filter: brightness(30%);
+    /* Reduz o brilho para 50% */
 }
 
 
 /* Estilo dos botões quando abertos */
 .accordion-button:not(.collapsed) {
-    background-color: black; /* Fundo preto */
-    color: white; /* Texto branco */
+    background-color: black;
+    /* Fundo preto */
+    color: white;
+    /* Texto branco */
 }
 
 /* Remove a borda azul ao abrir */
@@ -338,39 +406,32 @@ footer {
 
 /* Estilo dos itens */
 .accordion-item {
-    border: 1px solid #000; /* Borda preta */
-    border-radius: 6px; /* Bordas arredondadas */
+    border: 1px solid #000;
+    /* Borda preta */
+    border-radius: 6px;
+    /* Bordas arredondadas */
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 
-                0 3px 10px rgba(0, 0, 0, 0.15); /* Sombras suaves */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+        0 3px 10px rgba(0, 0, 0, 0.15);
+    /* Sombras suaves */
 }
 
 /* Efeito ao passar o mouse no vídeo */
 .accordion-item:hover {
-    transform: scale(1.02); /* Aumenta ligeiramente */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 
-                0 8px 20px rgba(0, 0, 0, 0.25); /* Intensifica as sombras */
+    transform: scale(1.02);
+    /* Aumenta ligeiramente */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+        0 8px 20px rgba(0, 0, 0, 0.25);
+    /* Intensifica as sombras */
 }
 
 /* Garantir bordas */
 .accordion-item:not(:first-child) {
-    border-top: 1px solid #000; /* Adiciona borda superior nas perguntas subsequentes */
+    border-top: 1px solid #000;
+    /* Adiciona borda superior nas perguntas subsequentes */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.breadcrumb-item+.breadcrumb-item::before {
+    color: #fff;
+    /* Cor do separador ("/") */
+}

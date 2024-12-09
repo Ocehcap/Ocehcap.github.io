@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nebufest</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -13,6 +15,7 @@
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navbar -->
     <header class="hero-section" style="background: url('images/7.jpg') no-repeat center center/cover;">
@@ -22,13 +25,14 @@
                 <a class="navbar-brand" href="home.html">
                     <img src="images/logo.png" alt="Logo" class="logo">
                 </a>
-    
+
                 <!-- Botão para abrir o Offcanvas (lado direito) -->
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-    
+
                 <!-- Links de navegação (telas grandes) -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto"> <!-- Centraliza os links -->
@@ -54,12 +58,14 @@
                 </div>
             </div>
         </nav>
-    
+
         <!-- Offcanvas Navbar (para telas pequenas) -->
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -84,12 +90,22 @@
                 </ul>
             </div>
         </div>
-        <div class="container">                           
+        <div class="container">
             <div class="hero-content text-center text-white">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item">
+                            <a href="/home.html" style="color: white;">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page" style="color: white;">Equipment</li>
+                    </ol>
+                </nav>
                 <h1 class="hero-titleSub px-3">Equipment</h1>
-                <p class="lead px-3 hero-subtitle">Our state-of-the-art equipment is designed to produce refreshing, safe and fun foam. With high-quality machines and non-toxic fluids, we offer an incredible experience for events of all kinds!</p>
+                <p class="lead px-3 hero-subtitle">Our state-of-the-art equipment is designed to produce refreshing,
+                    safe and fun foam. With high-quality machines and non-toxic fluids, we offer an incredible
+                    experience for events of all kinds!</p>
             </div>
-        </div> 
+        </div>
     </header>
 
     <section class="pt-5 pb-0 mb-sm-0 mb-md-4">
@@ -99,15 +115,17 @@
                 <div class="col-md-6 order-2 order-md-1">
                     <h2 class="mb-4 px-3" style="max-width: 580px; font-weight: bold;">Foam Cannon</h2>
                     <p class="lead px-3" style="max-width: 580px;">
-                        Transform the night with an LED light show and refreshing foam! A foam cannon that lights up your event and creates a unique atmosphere!
+                        Transform the night with an LED light show and refreshing foam! A foam cannon that lights up
+                        your event and creates a unique atmosphere!
                     </p>
                     <!-- Botões alinhados à esquerda para computadores -->
                     <div class="mt-4 d-none d-lg-block px-3">
-                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-toggle="modal" data-bs-target="#foamCannonModal">Read More</a>
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-toggle="modal"
+                            data-bs-target="#foamCannonModal">Read More</a>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
-    
+
                 <!-- Coluna da imagem -->
                 <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
                     <div class="video-wrapper mb-md-4 mb-lg-0">
@@ -115,29 +133,32 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Botões responsivos para tablets e telemóveis -->
             <div class="row mt-2">
                 <div class="col-12 d-md-block d-lg-none mb-4">
                     <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#foamCannonModal">Read More</a>
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#foamCannonModal">Read More</a>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- Modal -->
-        <div class="modal fade" id="foamCannonModal" tabindex="-1" aria-labelledby="foamCannonModalLabel" aria-hidden="true">
+        <div class="modal fade" id="foamCannonModal" tabindex="-1" aria-labelledby="foamCannonModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <!-- Header -->
                     <div class="modal-header bg-dark text-white">
                         <h2 class="modal-title fw-bold" id="foamCannonModalLabel">Foam Cannon</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div style="height: 2px; background-color: #00EAFF;"></div>
-    
+
                     <!-- Body -->
                     <div class="modal-body p-4">
                         <div class="d-flex justify-content-around text-center gap-4">
@@ -145,33 +166,37 @@
                             <div>
                                 <i class="bi bi-lightbulb text-dark fs-1"></i>
                                 <h4 class="mt-2">LED Lights</h4>
-                                <p>Internal and external LEDs with multiple color combinations. Lighting programs controllable via remote for full customization.</p>
+                                <p>Internal and external LEDs with multiple color combinations. Lighting programs
+                                    controllable via remote for full customization.</p>
                             </div>
                             <!-- Foam Production -->
                             <div>
                                 <i class="bi bi-droplet-half text-dark fs-1"></i>
                                 <h4 class="mt-2">Foam Production</h4>
-                                <p>Generates large amounts of foam in just a few minutes. Neutral, non-toxic foam with balanced pH – safe for skin and eyes.</p>
+                                <p>Generates large amounts of foam in just a few minutes. Neutral, non-toxic foam with
+                                    balanced pH – safe for skin and eyes.</p>
                             </div>
                             <!-- Ideal For -->
                             <div>
                                 <i class="bi bi-calendar-event text-dark fs-1"></i>
                                 <h4 class="mt-2">Ideal For</h4>
-                                <p>Outdoor parties, nighttime events, and visually stunning settings. Perfect for creating an energetic and immersive atmosphere.</p>
+                                <p>Outdoor parties, nighttime events, and visually stunning settings. Perfect for
+                                    creating an energetic and immersive atmosphere.</p>
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Footer -->
                     <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2"
+                            data-bs-dismiss="modal">Close</button>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
 
     <section class="pt-4 pb-0 mb-sm-0 mb-md-4">
         <div class="container">
@@ -182,30 +207,33 @@
                         <img src="images/5.jpeg" alt="Equipment" class="img-fluid rounded image-with-volume img-crop">
                     </div>
                 </div>
-    
+
                 <!-- Texto à direita -->
                 <div class="col-md-6 order-2 order-md-1 text-container">
                     <h2 class="mb-4 px-3" style="max-width: 580px; font-weight: bold;">Cascade Effect Machine</h2>
-                    <p class="lead px-3" style="max-width: 580px;">Impress your guests with an incomparable foam waterfall effect! More foam, more freshness, more fun!</p>
+                    <p class="lead px-3" style="max-width: 580px;">Impress your guests with an incomparable foam
+                        waterfall effect! More foam, more freshness, more fun!</p>
                     <!-- Botões centralizados para computador -->
                     <div class="mt-4 d-none d-lg-block px-3">
-                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-toggle="modal" data-bs-target="#cascadeModal">Read More</a>
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-toggle="modal"
+                            data-bs-target="#cascadeModal">Read More</a>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Botões responsivos para tablets e telemóveis -->
             <div class="row mt-2">
                 <div class="col-12 d-md-block d-lg-none mb-4">
                     <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#cascadeModal">Read More</a>
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#cascadeModal">Read More</a>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- Modal -->
         <div class="modal fade" id="cascadeModal" tabindex="-1" aria-labelledby="cascadeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -213,10 +241,11 @@
                     <!-- Header -->
                     <div class="modal-header bg-dark text-white">
                         <h2 class="modal-title fw-bold" id="cascadeModalLabel">Cascade Effect Machine</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div style="height: 2px; background-color: #00EAFF;"></div>
-    
+
                     <!-- Body -->
                     <div class="modal-body p-4">
                         <div class="d-flex justify-content-around text-center gap-4">
@@ -224,33 +253,37 @@
                             <div>
                                 <i class="bi bi-droplet text-dark fs-1"></i>
                                 <h4 class="mt-2">Foam Production</h4>
-                                <p>Quickly generates refreshing foam in large quantities. Soft foam formula, safe for skin and eyes.</p>
+                                <p>Quickly generates refreshing foam in large quantities. Soft foam formula, safe for
+                                    skin and eyes.</p>
                             </div>
                             <!-- Technical Features -->
                             <div>
                                 <i class="bi bi-gear text-dark fs-1"></i>
                                 <h4 class="mt-2">Technical Features</h4>
-                                <p>Durable structure, ideal for heavy-duty use at events. Efficient and economical operation for liquid consumption.</p>
+                                <p>Durable structure, ideal for heavy-duty use at events. Efficient and economical
+                                    operation for liquid consumption.</p>
                             </div>
                             <!-- Applications -->
                             <div>
                                 <i class="bi bi-layers text-dark fs-1"></i>
                                 <h4 class="mt-2">Applications</h4>
-                                <p>Perfect for creating a cascading effect on stages and elevated areas. Designed to create impactful visual scenes for events.</p>
+                                <p>Perfect for creating a cascading effect on stages and elevated areas. Designed to
+                                    create impactful visual scenes for events.</p>
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Footer -->
                     <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2"
+                            data-bs-dismiss="modal">Close</button>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
 
     <section class="pt-4 pb-4 mb-sm-0 mb-md-4">
         <div class="container">
@@ -258,14 +291,16 @@
                 <!-- Coluna do texto -->
                 <div class="col-md-6 order-2 order-md-1">
                     <h2 class="mb-4 px-3" style="max-width: 580px; font-weight: bold;">Foam Products</h2>
-                    <p class="lead px-3" style="max-width: 580px;">Biodegradable, certified and safe foam - worry-free fun!</p>
+                    <p class="lead px-3" style="max-width: 580px;">Biodegradable, certified and safe foam - worry-free
+                        fun!</p>
                     <!-- Botões alinhados à esquerda para computadores -->
                     <div class="mt-4 d-none d-lg-block px-3">
-                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-toggle="modal" data-bs-target="#foamProductsModal">Read More</a>
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-toggle="modal"
+                            data-bs-target="#foamProductsModal">Read More</a>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
-        
+
                 <!-- Coluna da imagem -->
                 <div class="col-md-6 text-center order-1 order-md-2 mb-4 mb-md-0">
                     <div class="video-wrapper mb-md-4 mb-lg-0">
@@ -273,29 +308,32 @@
                     </div>
                 </div>
             </div>
-        
+
             <!-- Botões responsivos para tablets e telemóveis -->
             <div class="row mt-2">
                 <div class="col-12 d-md-block d-lg-none mb-4">
                     <div class="d-flex flex-wrap justify-content-center gap-2">
-                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg" data-bs-toggle="modal" data-bs-target="#foamProductsModal">Read More</a>
+                        <a href="#" class="btn btn-custom2 btn-outline-dark btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#foamProductsModal">Read More</a>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <!-- Modal -->
-        <div class="modal fade" id="foamProductsModal" tabindex="-1" aria-labelledby="foamProductsModalLabel" aria-hidden="true">
+        <div class="modal fade" id="foamProductsModal" tabindex="-1" aria-labelledby="foamProductsModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <!-- Header -->
                     <div class="modal-header bg-dark text-white">
                         <h2 class="modal-title fw-bold" id="foamProductsModalLabel">Foam Products</h2>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div style="height: 2px; background-color: #00EAFF;"></div>
-        
+
                     <!-- Body -->
                     <div class="modal-body p-4">
                         <div class="d-flex justify-content-around text-center gap-4">
@@ -303,34 +341,38 @@
                             <div>
                                 <i class="bi bi-shield-check text-dark fs-1"></i>
                                 <h4 class="mt-2">Safe Formulation</h4>
-                                <p>Meets all European safety standards. Biodegradable and pH-neutral, ensuring safety for skin and eyes.</p>
+                                <p>Meets all European safety standards. Biodegradable and pH-neutral, ensuring safety
+                                    for skin and eyes.</p>
                             </div>
                             <!-- Certification -->
                             <div>
                                 <i class="bi bi-award text-dark fs-1"></i>
                                 <h4 class="mt-2">Certification</h4>
-                                <p>Safety certifications available upon request. Tested and approved for use with children and adults.</p>
+                                <p>Safety certifications available upon request. Tested and approved for use with
+                                    children and adults.</p>
                             </div>
                             <!-- Environmental Benefits -->
                             <div>
                                 <i class="bi bi-tree text-dark fs-1"></i>
                                 <h4 class="mt-2">Environmental Benefits</h4>
-                                <p>Eco-friendly composition with biodegradable ingredients. Sustainable and safe for the environment, minimizing impact.</p>
+                                <p>Eco-friendly composition with biodegradable ingredients. Sustainable and safe for the
+                                    environment, minimizing impact.</p>
                             </div>
                         </div>
                     </div>
-        
+
                     <!-- Footer -->
                     <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-custom2 btn-outline-dark btn-lg me-2"
+                            data-bs-dismiss="modal">Close</button>
                         <a href="quotes.html" class="btn btn-custom1 btn-lg">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-        <!-- Footer -->
+
+    <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
         <p>Copyright © Your Website 2023</p>
         <p>
@@ -344,4 +386,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
